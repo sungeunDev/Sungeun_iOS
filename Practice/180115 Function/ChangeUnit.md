@@ -1,108 +1,124 @@
-``` swift
-//
-//  making shape.swift
-//  XcodeTest
-//
-//  Created by 박성은 on 2018. 1. 15..
-//  Copyright © 2018년 SE. All rights reserved.
-//
+# [ 단위 변환 ]
 
+## ㅁ 실습 내용
+
+![단위 변환](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Practice/img/180115_Function_ChangeUnit.png)
+
+<br>
+
+## ㅁ 결과값
+
+``` swift
+1인치 = 2.54cm
+1센치 = 0.39in
+if문 이용
+3.95MB
+38.60GB
+switch문 이용
+8.88MB
+86.75GB
+48230초
+```
+
+<br>
+
+## ㅁ Code
+
+
+``` swift
 import Foundation
 
-// 각 도형별로 면적, 둘레, 부피 구하는 함수
+// 1. inch to cm, cm to inch
 
-
-func square(length: Int) -> (Int, Int, Int)
+func inch(switch cm: Int) -> Double
 {
-    let area = length * length
-    let perimeter = 4 * length
-    let volume = length * length * length
-    return (area, perimeter, volume)
+    return Double(cm) * 2.54
 }
 
-func rectangle(length: Int, width: Int, height: Int) -> (Int, Int, Int)
+func cm(switch inch:Int) -> String
 {
-    let area = length * width
-    let perimeter = 2 * (length+width)
-    let volume = area * height
-    return (area, perimeter, volume)
+    return String(format: "%.2f", Double(inch) / 2.54)
 }
 
-func circle(radius: Int, height: Int) -> (Double, String, String)
+print("1인치 = \(inch(switch: 1))cm")
+print("1센치 = \(cm(switch: 1))in")
+
+
+// 4. KB to MB, MB to GB
+// 1024KB = 1MB
+
+// if문 이용
+func dataIf(switch kb:Int) -> String
 {
-    let area = 3.14 * Double(radius) * Double(radius)
+    let mb: Double = Double(kb) / 1024
+    let gb: Double = mb / 1024
     
-    // String(format: "%.2f", ~) >> 소수점 아래 두자리까지 표현
-    let circumference = String(format: "%.2f", 2 * 3.14 * Double(radius))
-    let sphereVolume = String(format: "%.2f", area * Double(radius) * 4 / 3)
-    let circularCylinderVolume = String(format: "%.2f", area * Double(height))
+    if kb<1024
+    {
+        return "\(kb)KB"
+    }
     
-    return (area, circumference, "sphere : \(sphereVolume), circularCylinder : \(circularCylinderVolume)")
+    else if kb < 1048576
+    {
+        return ("\(String(format:"%.2f", mb))MB")
+    }
+        
+    else
+    {
+        return ("\(String(format:"%.2f", gb))GB")
+    }
 }
 
-func triangle(width: Int, height: Int) -> (Int,String)
+print("if문 이용")
+print(dataIf(switch: 4048))
+print(dataIf(switch: 40480000))
+
+
+//swith문 이용
+func dataSwitch(switch kb:Int) -> String
 {
-    let radius = width / 2
-    let area = width * height / 2
-    let coneVolume = String(format: "%.2f", 3.14 * Double(radius) * Double(radius) * Double(height) / 3)
+    switch kb {
+    case 0..<1024:
+        return "\(kb)KB"
+        
+    case 1024..<1048576:
+        let mb: Double = Double(kb) / 1024
+        return ("\(String(format:"%.2f", mb))MB")
     
-    return (area, coneVolume)
+    default:
+        let gb: Double = Double(kb) / 1024 / 1024
+        return ("\(String(format:"%.2f", gb))GB")
+    }
 }
 
-
-//결과값
-print("area, perimeter, volume)")
-print("suare : \(square(length: 3))")
-print("rectangle : \(rectangle(length: 4, width: 5, height: 6))")
-print("circle : \(circle(radius: 5, height: 4))")
-print("triangle : \(triangle(width: 6, height: 4))")
+print("switch문 이용")
+print(dataSwitch(switch: 9096))
+print(dataSwitch(switch: 90960000))
 
 
 
+// 5. 시간을 받아서 초 단위로 변경하는 함수
+// hh mm ss
+// 강사님이랑 같이 진행. 나중에 혼자서 짜볼 것.
 
-
-/*
- 
-<1차 시도>
--. [도형-면적, 도형-둘레, 도형-부피] >> 각 도형당 3가지의 함수가 나오도록 작성
- >. 문제점 : 길이가 같은 값일 경우 함수를 3번 이용해야 한다는 단점.
- 
-
-func squareArea(length: Int) -> Int
+func changeToSecond(from time: Int) -> Int
 {
-    return length * length
+    // 시간을 100으로 나눠서 몫, 나머지로 분리
+    var remainTime: Int = time
+    
+    // % : 나머지 구하는 연산자
+    let second:Int = remainTime % 100
+    remainTime = remainTime / 100
+    
+    let min: Int = remainTime % 100
+    remainTime = remainTime / 100
+    
+    let hour: Int = remainTime % 100
+    remainTime = remainTime / 100
+    
+    return (hour * 3600 + min * 60 + second)
 }
 
-func squarePerimeter(length: Int) -> Int
-{
-    return length * 4
-}
+print("\(changeToSecond(from: 132350))초")
 
-func cubeVolume(length: Int) -> Int
-{
-    return length * length * length
-}
-
-
-<2차 시도>
- -.
- 
-let length: Int = 4
-let area: Int = squareArea(length: length)
-let perimeter: Int = squarePerimeter(length: length)
-let volume: Int = cubeVolume(length: length)
-
-
-func square(one: Int, two: Int, three: Int) -> (Int, Int, Int)
-{
-    let area = squareArea(length: one)
-    let perimeter = squarePerimeter(length: two)
-    let volume = cubeVolume(length: three)
-    return(area, perimeter, volume)
-}
-
-let result: (are: Int, perimeter: Int, volume: Int) = square(one: 4, two: 5, three: 6)
-
- 
- */
 ```
