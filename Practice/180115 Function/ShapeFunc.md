@@ -3,8 +3,7 @@
 
 ## ㅁ 실습 내용
 
-- ![도형 넓이, 둘레, 부피 구하기!](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Practice/img/180115_Function_ShapeFunc.png)
-
+![도형 넓이, 둘레, 부피 구하기!]
 
 <br>
 
