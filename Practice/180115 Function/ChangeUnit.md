@@ -44,6 +44,43 @@ print("1인치 = \(inch(switch: 1))cm")
 print("1센치 = \(cm(switch: 1))in")
 
 
+
+// 2. m^2 to 평, 평 to m^2
+
+func meter(to pyung: Int) -> Double
+{
+let convertPyung: Double = Double(pyung) * 0.3025
+return convertPyung
+}
+
+func pyung(to meter: Int) -> Double
+{
+let convertMeter: Double = 3.305785 * Double(meter)
+return convertMeter
+}
+
+print("1제곱미터 = \(meter(to: 1))평")
+print("1평 = \(pyung(to: 1))제곱미터")
+
+//3. 화씨 <-> 섭씨
+
+func changeTemperatureF(to C: Int) -> Double
+{
+let convertC = -17.222222 * Double(C)
+return convertC
+}
+
+func changeTemperatureC(to F: Int) -> Double
+{
+let convertF = 33.8 * Double(F)
+return convertF
+}
+
+print("1섭씨(C) = \(changeTemperatureC(to: 1))F")
+print("1화씨(F) = \(changeTemperatureF(to: 1))C")
+
+
+
 // 4. KB to MB, MB to GB
 // 1024KB = 1MB
 
