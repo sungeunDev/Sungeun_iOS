@@ -1,3 +1,28 @@
+# [ 함수 실습 - 도형 넓이 구하기 ]
+
+
+## ㅁ 실습 내용
+
+- 도형 넓이, 둘레, 부피 구하기
+
+
+
+<br>
+
+## ㅁ 결과값
+``` swift
+area, perimeter, volume
+suare : (9, 12, 27)
+rectangle : (20, 18, 120)
+circle : (78.5, "31.40", "sphere : 523.33, circularCylinder : 314.00")
+triangle : (12, "37.68")
+```
+
+<br>
+
+## ㅁ Code
+
+
 ``` swift
 //
 //  making shape.swift
@@ -51,7 +76,7 @@ func triangle(width: Int, height: Int) -> (Int,String)
 
 
 //결과값
-print("area, perimeter, volume)")
+print("area, perimeter, volume")
 print("suare : \(square(length: 3))")
 print("rectangle : \(rectangle(length: 4, width: 5, height: 6))")
 print("circle : \(circle(radius: 5, height: 4))")
