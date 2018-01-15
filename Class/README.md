@@ -7,3 +7,7 @@
 * [180110 Xcode, OOP(Object-Orient Programming)](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Class/180110/180110.md)
 * [180111 Class](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Class/180111/180111.md)
 * [180112 Calculator Practice]
+
+
+## ㅁ Week 2. 객체지향 프로그래밍 및 프로그래밍 기초/숙달
+* [180115 변수&함수](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Class/180115/180115.md)
