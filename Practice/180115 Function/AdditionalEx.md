@@ -173,6 +173,10 @@ func roundInt(from x: Double) -> Int
     {
         return Int(x+1)
     }
+    
+// 제일 간단한 방법은 "+ 0.5 한 후 Int로 변환!!!"
+// 헤헤 나 되게 어렵게 짠 것 같다.
+    
 }
 
 print("실수 입력, 소수점 첫번째 자리에서 정수 반올림")
