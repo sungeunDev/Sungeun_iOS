@@ -2,7 +2,7 @@
 
 
 ### ㅁ 180112 계산기 만들기
-- [Rainbow Calculator](/Users/ssungnni/ParkSungEun_iOS_School6/Practice/180112 Calculator/RainbowCalculator.md)
+- [Rainbow Calculator](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Practice/180112%20Calculator/RainbowCalculator.md)
 
 ### ㅁ 180115 함수 만들기 연습
 - [도형 넓이 구하기](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Practice/180115%20Function/ShapeFunc.md)
