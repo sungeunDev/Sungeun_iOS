@@ -3,7 +3,7 @@
 
 ## ㅁ 실습 내용
 
-![사진](/Users/ssungnni/ParkSungEun_iOS_School6/Practice/img/180117_Calculator.png)
+![사진](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Practice/img/180117_Calculator.png)
 
 - 조건 : 두 개의 숫자만 연산 가능
 - 연산자 버튼의 컬러에 따라 입력창 색상 변경
