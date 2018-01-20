@@ -163,12 +163,8 @@ print(convertPoint(from: test(score: 39)))
 
 func averageGrade(math: String, eng: String, kor: String) -> String
 {
-    let mathPoint = convertPoint(from: math)
-    let engPoint = convertPoint(from: eng)
-    let korPoint = convertPoint(from: kor)
-    
-    let totalPoint = mathPoint + engPoint + korPoint
-    let averagePoint: Double = Double(totalPoint) / 3
+    let totalPoint = convertPoint(from: math) + convertPoint(from: eng) + convertPoint(from: kor)
+    let averagePoint: Double = totalPoint / 3
     var grade: String = ""
     
     if averagePoint == 4.5

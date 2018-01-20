@@ -48,8 +48,8 @@ func findLeapYear(year: Int) -> Bool
     switch year%4 {
     case 0 where (year%400) == 0 && (year%100) == 0:
         return true
-//    case 0 where (year%100) == 0:
-//        return false
+    case 0 where (year%100) == 0:
+        return false
     case 0:
         return true
     default:
@@ -77,9 +77,38 @@ func lastDayOf(year: Int, month:Int) -> Int
 }
 
 print("1900년 2월의 마지막 날은 \(lastDayOf(year: 1900, month: 2))일 입니다.")
-
-
 // 튜플, 바인딩 활용해서 코딩해보기
+
+
+
+func lastDayOfVinding(year: Int, month: Int) -> Int
+{
+    let leapyearCheck: Bool = findLeapYear(year: year)
+    let compareData = (month, leapyearCheck)
+    var lastday: Int = 0
+   
+    switch compareData
+    {
+    case (2, true):
+        lastday = 29
+    case (2, false):
+        lastday = 28
+    case (let x, _):
+        switch x 
+        {
+        case 4, 6, 9, 11:
+            lastday = 30
+        case 1, 3, 5, 7, 8, 12:
+            lastday = 31
+        default:
+            print("잘못된 월을 입력하였습니다.")
+            lastday = 0
+        }
+    }
+    return lastday
+}
+
+print(lastDayOfVinding(year: 2012, month: 345))
 
 
 
