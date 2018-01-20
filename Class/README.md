@@ -12,3 +12,8 @@
 ## ㅁ Week 2. 객체지향 프로그래밍 및 프로그래밍 기초/숙달
 * [180115 변수&함수](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Class/180115/180115.md)
 * [180116 조건문](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Class/180116/180116.md)
+* [180118 반복문](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Class/180118/180118.md)
+* [180119 Collection](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Class/180119/180119.md)
+
+
+## ㅁ Week 3. 
