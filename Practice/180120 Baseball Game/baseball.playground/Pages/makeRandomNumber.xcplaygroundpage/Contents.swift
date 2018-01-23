@@ -41,4 +41,22 @@ return randomNumberList
 makeRandomNumber()
 
 
+// for version
+
+
+private func makeRandomNumber2() -> [Int]
+{
+    var randomNumberList:[Int] = []
+    while randomNumberList.count != 3
+    {
+        let randomNum:Int = Int(arc4random_uniform(10))
+        if !randomNumberList.contains(randomNum)
+        {
+            randomNumberList.append(randomNum)
+        }
+    }
+    return randomNumberList
+}
+
+makeRandomNumber2()
 

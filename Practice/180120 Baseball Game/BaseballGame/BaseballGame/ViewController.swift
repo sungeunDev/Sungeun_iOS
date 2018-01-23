@@ -19,41 +19,55 @@ class ViewController: UIViewController {
     //MARK : - Private Method
     private func makeRandomNumber() -> [Int]
     {
-        //랜덤으로 숫자를 얻어내서 시크릿 번호 3개 알아내기
+        // ver.2 (강사님 direction)
         var randomNumberList:[Int] = []
-        
-        //랜덤 숫자 얻는 코드! 10 = 0~9까지는 랜덤숫자한개
-        let randomNum:Int = Int(arc4random_uniform(10))
-        
-        //구현되어야 하는 부분
-        let randomNum2:Int = Int(arc4random_uniform(10))
-        let randomNum3:Int = Int(arc4random_uniform(10))
-        
-        randomNumberList.append(randomNum)
-        randomNumberList.append(randomNum2)
-        randomNumberList.append(randomNum3)
-        
-        var m = 0
-        var n = 1
-       
-        while m < 3
+        while randomNumberList.count != 3
         {
-            n = m+1
-            while n < 3
+            let randomNum:Int = Int(arc4random_uniform(10))
+            if !randomNumberList.contains(randomNum)
             {
-                if randomNumberList[m] == randomNumberList[n]
-                {
-                    let randomNum2Temp:Int = Int(arc4random_uniform(10))
-                    randomNumberList[n] = randomNum2Temp
-                }else
-                {
-                    n += 1
-                }
+                randomNumberList.append(randomNum)
             }
-            m += 1
         }
-       return randomNumberList
+        return randomNumberList
     }
+    
+// ver.1
+//        //랜덤으로 숫자를 얻어내서 시크릿 번호 3개 알아내기
+//        var randomNumberList:[Int] = []
+//
+//        //랜덤 숫자 얻는 코드! 10 = 0~9까지는 랜덤숫자한개
+//        let randomNum:Int = Int(arc4random_uniform(10))
+//
+//        //구현되어야 하는 부분
+//        let randomNum2:Int = Int(arc4random_uniform(10))
+//        let randomNum3:Int = Int(arc4random_uniform(10))
+//
+//        randomNumberList.append(randomNum)
+//        randomNumberList.append(randomNum2)
+//        randomNumberList.append(randomNum3)
+//
+//        var m = 0
+//        var n = 1
+//
+//        while m < 3
+//        {
+//            n = m+1
+//            while n < 3
+//            {
+//                if randomNumberList[m] == randomNumberList[n]
+//                {
+//                    let randomNum2Temp:Int = Int(arc4random_uniform(10))
+//                    randomNumberList[n] = randomNum2Temp
+//                }else
+//                {
+//                    n += 1
+//                }
+//            }
+//            m += 1
+//        }
+//       return randomNumberList
+//    }
 
     /* 결과 확인
      #룰 : S는 결과에 포함되고 자릿수 가 같은,
