@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  ClassPractice2
+//  OverrideTest
 //
-//  Created by 박성은 on 2018. 1. 23..
+//  Created by 박성은 on 2018. 1. 24..
 //  Copyright © 2018년 SE. All rights reserved.
 //
 

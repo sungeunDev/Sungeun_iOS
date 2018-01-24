@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FFDF738C2016C9DC005C59F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF738B2016C9DC005C59F0 /* AppDelegate.swift */; };
-		FFDF738E2016C9DC005C59F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF738D2016C9DC005C59F0 /* ViewController.swift */; };
-		FFDF73912016C9DC005C59F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFDF738F2016C9DC005C59F0 /* Main.storyboard */; };
-		FFDF73932016C9DC005C59F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFDF73922016C9DC005C59F0 /* Assets.xcassets */; };
-		FFDF73962016C9DC005C59F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFDF73942016C9DC005C59F0 /* LaunchScreen.storyboard */; };
-		FFDF739E2016C9EC005C59F0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF739D2016C9EC005C59F0 /* Person.swift */; };
-		FFDF73A02016CA00005C59F0 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF739F2016CA00005C59F0 /* Subject.swift */; };
-		FFDF73A22016CA1A005C59F0 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDF73A12016CA1A005C59F0 /* Calculator.swift */; };
+		FF60D18820185752005719AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF60D18720185752005719AE /* AppDelegate.swift */; };
+		FF60D18A20185752005719AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF60D18920185752005719AE /* ViewController.swift */; };
+		FF60D18D20185752005719AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF60D18B20185752005719AE /* Main.storyboard */; };
+		FF60D18F20185752005719AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF60D18E20185752005719AE /* Assets.xcassets */; };
+		FF60D19220185752005719AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF60D19020185752005719AE /* LaunchScreen.storyboard */; };
+		FF60D19A2018575F005719AE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF60D1992018575F005719AE /* Person.swift */; };
+		FF60D19C20185768005719AE /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF60D19B20185768005719AE /* Student.swift */; };
+		FF60D19E2018576F005719AE /* UniversityStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF60D19D2018576F005719AE /* UniversityStudent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FFDF73882016C9DC005C59F0 /* ClassPractice2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassPractice2.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFDF738B2016C9DC005C59F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFDF738D2016C9DC005C59F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FFDF73902016C9DC005C59F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FFDF73922016C9DC005C59F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FFDF73952016C9DC005C59F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FFDF73972016C9DC005C59F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFDF739D2016C9EC005C59F0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		FFDF739F2016CA00005C59F0 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
-		FFDF73A12016CA1A005C59F0 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		FF60D18420185752005719AE /* OverrideTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OverrideTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF60D18720185752005719AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF60D18920185752005719AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF60D18C20185752005719AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF60D18E20185752005719AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF60D19120185752005719AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF60D19320185752005719AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF60D1992018575F005719AE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		FF60D19B20185768005719AE /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		FF60D19D2018576F005719AE /* UniversityStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityStudent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FFDF73852016C9DC005C59F0 /* Frameworks */ = {
+		FF60D18120185752005719AE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,75 +41,75 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FFDF737F2016C9DC005C59F0 = {
+		FF60D17B20185752005719AE = {
 			isa = PBXGroup;
 			children = (
-				FFDF738A2016C9DC005C59F0 /* ClassPractice2 */,
-				FFDF73892016C9DC005C59F0 /* Products */,
+				FF60D18620185752005719AE /* OverrideTest */,
+				FF60D18520185752005719AE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FFDF73892016C9DC005C59F0 /* Products */ = {
+		FF60D18520185752005719AE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FFDF73882016C9DC005C59F0 /* ClassPractice2.app */,
+				FF60D18420185752005719AE /* OverrideTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FFDF738A2016C9DC005C59F0 /* ClassPractice2 */ = {
+		FF60D18620185752005719AE /* OverrideTest */ = {
 			isa = PBXGroup;
 			children = (
-				FFDF738B2016C9DC005C59F0 /* AppDelegate.swift */,
-				FFDF738D2016C9DC005C59F0 /* ViewController.swift */,
-				FFDF73A12016CA1A005C59F0 /* Calculator.swift */,
-				FFDF739D2016C9EC005C59F0 /* Person.swift */,
-				FFDF739F2016CA00005C59F0 /* Subject.swift */,
-				FFDF738F2016C9DC005C59F0 /* Main.storyboard */,
-				FFDF73922016C9DC005C59F0 /* Assets.xcassets */,
-				FFDF73942016C9DC005C59F0 /* LaunchScreen.storyboard */,
-				FFDF73972016C9DC005C59F0 /* Info.plist */,
+				FF60D18720185752005719AE /* AppDelegate.swift */,
+				FF60D18920185752005719AE /* ViewController.swift */,
+				FF60D1992018575F005719AE /* Person.swift */,
+				FF60D19B20185768005719AE /* Student.swift */,
+				FF60D19D2018576F005719AE /* UniversityStudent.swift */,
+				FF60D18B20185752005719AE /* Main.storyboard */,
+				FF60D18E20185752005719AE /* Assets.xcassets */,
+				FF60D19020185752005719AE /* LaunchScreen.storyboard */,
+				FF60D19320185752005719AE /* Info.plist */,
 			);
-			path = ClassPractice2;
+			path = OverrideTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FFDF73872016C9DC005C59F0 /* ClassPractice2 */ = {
+		FF60D18320185752005719AE /* OverrideTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FFDF739A2016C9DC005C59F0 /* Build configuration list for PBXNativeTarget "ClassPractice2" */;
+			buildConfigurationList = FF60D19620185752005719AE /* Build configuration list for PBXNativeTarget "OverrideTest" */;
 			buildPhases = (
-				FFDF73842016C9DC005C59F0 /* Sources */,
-				FFDF73852016C9DC005C59F0 /* Frameworks */,
-				FFDF73862016C9DC005C59F0 /* Resources */,
+				FF60D18020185752005719AE /* Sources */,
+				FF60D18120185752005719AE /* Frameworks */,
+				FF60D18220185752005719AE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ClassPractice2;
-			productName = ClassPractice2;
-			productReference = FFDF73882016C9DC005C59F0 /* ClassPractice2.app */;
+			name = OverrideTest;
+			productName = OverrideTest;
+			productReference = FF60D18420185752005719AE /* OverrideTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FFDF73802016C9DC005C59F0 /* Project object */ = {
+		FF60D17C20185752005719AE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = SE;
 				TargetAttributes = {
-					FFDF73872016C9DC005C59F0 = {
+					FF60D18320185752005719AE = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = FFDF73832016C9DC005C59F0 /* Build configuration list for PBXProject "ClassPractice2" */;
+			buildConfigurationList = FF60D17F20185752005719AE /* Build configuration list for PBXProject "OverrideTest" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,57 +117,57 @@
 				en,
 				Base,
 			);
-			mainGroup = FFDF737F2016C9DC005C59F0;
-			productRefGroup = FFDF73892016C9DC005C59F0 /* Products */;
+			mainGroup = FF60D17B20185752005719AE;
+			productRefGroup = FF60D18520185752005719AE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FFDF73872016C9DC005C59F0 /* ClassPractice2 */,
+				FF60D18320185752005719AE /* OverrideTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FFDF73862016C9DC005C59F0 /* Resources */ = {
+		FF60D18220185752005719AE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFDF73962016C9DC005C59F0 /* LaunchScreen.storyboard in Resources */,
-				FFDF73932016C9DC005C59F0 /* Assets.xcassets in Resources */,
-				FFDF73912016C9DC005C59F0 /* Main.storyboard in Resources */,
+				FF60D19220185752005719AE /* LaunchScreen.storyboard in Resources */,
+				FF60D18F20185752005719AE /* Assets.xcassets in Resources */,
+				FF60D18D20185752005719AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FFDF73842016C9DC005C59F0 /* Sources */ = {
+		FF60D18020185752005719AE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFDF73A02016CA00005C59F0 /* Subject.swift in Sources */,
-				FFDF739E2016C9EC005C59F0 /* Person.swift in Sources */,
-				FFDF738E2016C9DC005C59F0 /* ViewController.swift in Sources */,
-				FFDF73A22016CA1A005C59F0 /* Calculator.swift in Sources */,
-				FFDF738C2016C9DC005C59F0 /* AppDelegate.swift in Sources */,
+				FF60D19A2018575F005719AE /* Person.swift in Sources */,
+				FF60D18A20185752005719AE /* ViewController.swift in Sources */,
+				FF60D18820185752005719AE /* AppDelegate.swift in Sources */,
+				FF60D19E2018576F005719AE /* UniversityStudent.swift in Sources */,
+				FF60D19C20185768005719AE /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FFDF738F2016C9DC005C59F0 /* Main.storyboard */ = {
+		FF60D18B20185752005719AE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FFDF73902016C9DC005C59F0 /* Base */,
+				FF60D18C20185752005719AE /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		FFDF73942016C9DC005C59F0 /* LaunchScreen.storyboard */ = {
+		FF60D19020185752005719AE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FFDF73952016C9DC005C59F0 /* Base */,
+				FF60D19120185752005719AE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FFDF73982016C9DC005C59F0 /* Debug */ = {
+		FF60D19420185752005719AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -232,7 +232,7 @@
 			};
 			name = Debug;
 		};
-		FFDF73992016C9DC005C59F0 /* Release */ = {
+		FF60D19520185752005719AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -282,30 +282,30 @@
 			};
 			name = Release;
 		};
-		FFDF739B2016C9DC005C59F0 /* Debug */ = {
+		FF60D19720185752005719AE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXH5CKM9TX;
-				INFOPLIST_FILE = ClassPractice2/Info.plist;
+				INFOPLIST_FILE = OverrideTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.se.ClassPractice2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.se.OverrideTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		FFDF739C2016C9DC005C59F0 /* Release */ = {
+		FF60D19820185752005719AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXH5CKM9TX;
-				INFOPLIST_FILE = ClassPractice2/Info.plist;
+				INFOPLIST_FILE = OverrideTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.se.ClassPractice2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.se.OverrideTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -315,25 +315,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FFDF73832016C9DC005C59F0 /* Build configuration list for PBXProject "ClassPractice2" */ = {
+		FF60D17F20185752005719AE /* Build configuration list for PBXProject "OverrideTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FFDF73982016C9DC005C59F0 /* Debug */,
-				FFDF73992016C9DC005C59F0 /* Release */,
+				FF60D19420185752005719AE /* Debug */,
+				FF60D19520185752005719AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FFDF739A2016C9DC005C59F0 /* Build configuration list for PBXNativeTarget "ClassPractice2" */ = {
+		FF60D19620185752005719AE /* Build configuration list for PBXNativeTarget "OverrideTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FFDF739B2016C9DC005C59F0 /* Debug */,
-				FFDF739C2016C9DC005C59F0 /* Release */,
+				FF60D19720185752005719AE /* Debug */,
+				FF60D19820185752005719AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FFDF73802016C9DC005C59F0 /* Project object */;
+	rootObject = FF60D17C20185752005719AE /* Project object */;
 }
