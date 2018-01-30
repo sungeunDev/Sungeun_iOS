@@ -11,56 +11,14 @@ import Foundation
 class Person {
  
     var name: String
-    var major: String
     var gender: String
     
-    var subjects: [Subject] = []
-    
-    init(name: String, major: String, gender: String) {
+    init(name: String, gender: String) {
         self.name = name
-        self.major = major
         self.gender = gender
-    }
-    
-    // 한개씩 받기
-    func addSubject(name: String, score: Int)
-    {
-        subjects.append(Subject(name: name, score: score))
-    }
-    
-    // 과목 : 점수 를 한꺼번에 받기(딕셔너리)
-    func setSubjects(subjectsDic: [String:Int])
-    {
-        for (subName, subScore) in subjectsDic
-        {
-            addSubject(name: subName, score: subScore)
-        }
-    }
-    
-    
-    func getIQ() -> Int
-    {
-        for subject in subjects
-        {
-            if subject.name == "수학"
-            {
-                return subject.score
-            }
-        }
-        return 0
-    }
-    
-    func getPower() -> Int
-    {
-        for subject in subjects
-        {
-            if subject.name == "싸움"
-            {
-                return subject.score
-            }
-        }
-        return 0
-    }
-    
-}
 
+        //어차피 초기화 할거라면 아예 옵셔널로 지정하지 않는게 더 좋을 수도 있음.
+        //선언할 때 초기화!
+        //언제, 어디서, 무엇에 어떤 옵셔널을 쓸지가 관건.
+    }
+}

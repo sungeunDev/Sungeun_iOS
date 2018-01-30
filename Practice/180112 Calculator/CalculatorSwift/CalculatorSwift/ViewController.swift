@@ -12,16 +12,28 @@ class ViewController: UIViewController {
     @IBOutlet weak var secondNumDisplay: UILabel!
     @IBOutlet weak var resultDisplay: UILabel!
     
-    var operationTemp: String = ""
+    var operationTemp: String?
     
-    var firstNum: String = "0"
-    var secondNum: String = "0"
-    var resultNum: String = "0"
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    var firstNum: String?
+    {
+        willSet(nextValue)
+        {
+            if let newValue = nextValue
+            {
+                firstNumDisplay.text = newValue
+            }
+        }
     }
+    var secondNum: String? {
+        willSet(nextValue)
+        {
+            if let newValue = nextValue
+            {
+                secondNumDisplay.text = newValue
+            }
+        }
+    }
+    var resultNum: String?
     
     
     //MARK: - Action Method
@@ -32,36 +44,35 @@ class ViewController: UIViewController {
         let numberStr: String = sender.titleLabel!.text!
         
         //연산자 유무확인
-        if operationTemp.count > 0
+        if let _ = operationTemp
         {
-            // let secondDisplay = secondNumDisplay.text!
             if secondNum == "0"
             {
-                // secondNumDisplay.text = numberStr
                 secondNum = numberStr
             }else
             {
-                // secondNumDisplay.text = secondNumDisplay.text! + numberStr
-                secondNum = secondNum + numberStr
+                secondNum += numberStr
             }
-            
-            secondNumDisplay.text = secondNum
         }else
         {
-            // let firstDisplay = firstNumDisplay.text!
             if firstNum == "0"
             {
-                // firstNumDisplay.text = numberStr
-                // 최초 계산기 시작을 알리며 디스플레이 리셋
                 resetDisplay()
                 firstNum = numberStr
             }else
             {
-                // firstNumDisplay.text = firstNumDisplay.text! + numberStr
-                firstNum = firstNum + numberStr
+                firstNum += numberStr
             }
-            firstNumDisplay.text = firstNum
-            
+        }
+    }
+    
+    private func inputNum(_ numStr: String, tempProperty: inout String?) {
+        if let num = tempProperty
+        {
+            tempProperty = num + numStr
+        } else
+        {
+            tempProperty = numStr
         }
     }
     
@@ -69,7 +80,7 @@ class ViewController: UIViewController {
     @IBAction func clickDidOperation(_ sender: UIButton) {
         let operStr = sender.titleLabel!.text!
         
-        if firstNum != "0"
+        if firstNum != nil
         {
             operationTemp = operStr
             changeColor(by: operStr)
@@ -86,11 +97,11 @@ class ViewController: UIViewController {
     
     @IBAction func clickDidResult(_ sender: UIButton) {
         
-        if secondNum != "0"
+        if let firNum = firstNum, let op = operationTemp, let secNum = secondNum
         {
-            let firstNumTemp: Int = Int(firstNum)!
-            let secondNumTemp: Int = Int(secondNum)!
-            let op: String = operationTemp
+            let firstNumTemp: Int = Int(firNum)!
+            let secondNumTemp: Int = Int(secNum)!
+//            let op: String = operationTemp!
             
             let resultNum = calculation(firstNum: firstNumTemp, operation: op, secondNum: secondNumTemp)
             resultDisplay.text = String(resultNum)
@@ -139,10 +150,9 @@ class ViewController: UIViewController {
     //데이터 리셋
     private func resetData()
     {
-        firstNum = "0"
-        secondNum = "0"
-        resultNum = "0"
-        operationTemp = ""
+        firstNum = nil
+        secondNum = nil
+        operationTemp = nil
     }
     
     //UI 리셋

@@ -12,7 +12,7 @@ class Calculator {
     
     //        각 평균 구하기
     
-    func average(student: Person)
+    func average(student: Student)
     {
         var sum = 0
         // for (sub, score) in student.subjects >> subjects는 dic형태가 아직 아니기 때문에 불러올 수 없음.
@@ -26,55 +26,42 @@ class Calculator {
 
     // 가장 싸움을 잘 하는 아이는?
     // Person... >> 파라미터를 복수개로 받을 수 있음. ',(콤마)'로 여러개!
-    func jjang(_ student: Person...)
+    
+    func jjang(_ student: Student...)
     {
-        var jjangName: String = ""
-        var maxPower: Int = 0
-        
-        for person in student
-        {
-            var comparePower = person.getPower()
-            //과목들 중에서 싸움을 찾아서 파워를 가져오기.
-            
-            if maxPower < comparePower
+        var jjang: Student?
+        for student in student {
+            if let jjangTemp = jjang
             {
-                maxPower = comparePower
-                
+//                if student.mathScore != nil
+//                {
+                    if jjangTemp.getPower() < student.getPower()
+                    {
+                        jjang = student
+                    }
+                    else
+                    {
+                        print("jjang은 없음.")
+                    }
+                }
             }
+                print(jjang!.name)
         }
-        
-        //멘붕 @.@..................... 어려웡 힝... ㅠ.ㅠ T.T t.t Q.Q 어려웡!!!!
-        //어려오.............................................
-        
-//        print("짱은 \()입니다.")
-    }
+
+
     
     //        고딩 둘 중 수학 점수가 높은 아이는?
-    func genius(stu1: Person, stu2: Person)
+    func genius(stu1: Student, stu2: Student)
     {
-
-        let stu1IQ: Int = stu1.getIQ()
-        let stu2IQ: Int = stu2.getIQ()
-        
-        // geniusPerson에 지금은 값이 없기 때문에 "?" : 옵셔널
-        var geniusPerson: Person?
-        var diffScore = 0
-        
-        if stu1IQ > stu2IQ
+        if let stu1Math = stu1.mathScore, let stu2Math = stu2.mathScore
         {
-            geniusPerson = stu1
-            diffScore = stu1IQ - stu2IQ
-        } else
-        {
-            geniusPerson = stu2
-            diffScore = stu2IQ - stu1IQ
+            if stu1Math > stu2Math
+            {
+               print(stu1.name)
+            } else
+            {
+               print(stu2.name)
+            }
         }
-        
-        print("\(geniusPerson!.name)의 수학점수가 \(diffScore)점 더 높습니다.")
     }
-    
-    
-    
-    
-    
-}
+
