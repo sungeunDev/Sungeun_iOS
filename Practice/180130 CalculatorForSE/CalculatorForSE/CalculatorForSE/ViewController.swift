@@ -10,31 +10,42 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var displayView: UIView!
+    var displayView: UILabel!
     var keyPadView: UIView!
     var etcView: UIView!
-    var operview: UIView!
+    var operView: UIView!
     var numberPadView : UIView!
     
-    var etcBtnList: [UIView] = []
-    var operBtnList: [UIView] = []
-    var numberPadBtnList: [UIView] = []
+    var etcBtnList: [UIButton] = []
+    var operBtnList: [UIButton] = []
+    var numberPadBtnList: [UIButton] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         createUI()
         updateLayout()
-        
     }
     
     // UI인스턴스 만드는 메소드
     private func createUI()
     {
         // display 영역
-        displayView = UIView()
+        displayView = UILabel()
+        // display 텍스트 설정
+        displayView.text = "0"
+        displayView.textAlignment = NSTextAlignment.right
+        displayView.textColor = .white
+        displayView.font = UIFont.systemFont(ofSize: 80)
+        // display layer 모양 설정
+        displayView.layer.cornerRadius = 20
+        displayView.layer.borderWidth = 1
+        displayView.layer.borderColor = UIColor.white.cgColor
+        displayView.clipsToBounds = true
+        // display View 추가
         self.view.addSubview(displayView)
-        
+        //=============================================
         // keyPad 영역
         keyPadView = UIView()
         self.view.addSubview(keyPadView)
@@ -42,80 +53,144 @@ class ViewController: UIViewController {
         // keyPad 내부 영역
         etcView = UIView()
         keyPadView.addSubview(etcView)
-        operview = UIView()
-        keyPadView.addSubview(operview)
+        operView = UIView()
+        keyPadView.addSubview(operView)
         numberPadView = UIView()
         keyPadView.addSubview(numberPadView)
         
         // test를 위한 색상 지정
         displayView.backgroundColor = UIColor.darkGray
-        keyPadView.backgroundColor = UIColor.black
-        etcView.backgroundColor = .red
-        operview.backgroundColor = .blue
-        numberPadView.backgroundColor = .yellow
+        keyPadView.backgroundColor = UIColor.gray
+        operView.backgroundColor = .orange
         
         // keyPad 내부 영역들 버튼 리스트 만들기
         etcBtnList = makeBtn(count: 3)
-        operBtnList = makeBtn(count: 5)
-        numberPadBtnList = makeBtn(count: 10)
+        arrange(viewList: etcBtnList, columnCount: 3, width: self.view.frame.size.width / 4)
         
-        // 버튼 리스트 생성
-        makeMatrix(for: etcBtnList, column: 3, superV: etcView)
-        makeMatrix(for: operBtnList, column: 1, superV: operview)
-        makeMatrix(for: numberPadBtnList, column: 3, superV: numberPadView)
+        let etcTitleList = ["C", "±", "%"]
+        for index in 0..<etcBtnList.count
+        {
+            let title = etcTitleList[index]
+            let btn = etcBtnList[index]
+            
+            btn.layer.borderWidth = 1
+            btn.layer.borderColor = UIColor.white.cgColor
+            
+            btn.setTitle(title, for: .normal)
+            btn.addTarget(self, action: #selector(self.etcHandler(_:)), for: .touchUpInside)
+            etcView.addSubview(btn)
+        }
+        
+        operBtnList = makeBtn(count: 5)
+        arrange(viewList: operBtnList, columnCount: 1, width: self.view.frame.size.width / 4)
+        let operTitleList = ["+", "−", "×", "÷", "="]
+        for index in 0..<operBtnList.count
+        {
+            let title = operTitleList[index]
+            let btn = operBtnList[index]
+            
+            btn.layer.borderWidth = 1
+            btn.layer.borderColor = UIColor.white.cgColor
+            
+            btn.setTitle(title, for: .normal)
+            btn.addTarget(self, action: #selector(self.operHandler(_:)), for: .touchUpInside)
+            operView.addSubview(btn)
+        }
+        
+        numberPadBtnList = makeBtn(count: 10)
+        arrange(viewList: numberPadBtnList, columnCount: 3, width: self.view.frame.size.width / 4)
+        let numberPadTitleList = ["7", "8", "9", "4", "5", "6", "1", "2", "3", "0"]
+        for index in 0..<numberPadBtnList.count
+        {
+            let title = numberPadTitleList[index]
+            let btn = numberPadBtnList[index]
+            
+            btn.layer.borderWidth = 1
+            btn.layer.borderColor = UIColor.white.cgColor
+            
+            btn.setTitle(title, for: .normal)
+            btn.setTitleColor(.orange, for: .highlighted)
+            btn.addTarget(self, action: #selector(self.numberPadHandler(_:)), for: .touchUpInside)
+            btn.addTarget(self, action: #selector(self.numberDown(_:)), for: .touchDown)
+            numberPadView.addSubview(btn)
+        }
     }
     
     // Btn List 생성 메소드
-    func makeBtn(count: Int) -> [UIView]
+    func makeBtn(count: Int) -> [UIButton]
     {
-        var result: [UIView] = []
+        var returnList: [UIButton] = []
         
-        for _ in 0..<count
+        for num in 0..<count
         {
-            result.append(UIView())
+            let btn = UIButton()
+            btn.tag = num
+            returnList.append(btn)
         }
-        return result
+        return returnList
     }
     
-    // List 내부 Matrix 생성 메소드
-    func makeMatrix(for list : [UIView], column: Int, superV: UIView)
+    // 생성한 버튼 위치 설정
+    func arrange(viewList: [UIButton], columnCount: Int, width: CGFloat)
     {
-        let BtnSize: CGFloat = self.view.frame.size.width / 4
-        
-        for index in  0..<list.count
+        for index in  0..<viewList.count
         {
-            let col = index % column
-            let row = index / column
+            let col = CGFloat(index % columnCount)
+            let row = CGFloat(index / columnCount)
             
-            let pointX = superV.frame.origin.x
-            let pointY = superV.frame.origin.y
-            
-            list[index].frame = CGRect(x: pointX + CGFloat(col) * BtnSize, y: pointY + CGFloat(row) * BtnSize, width: BtnSize, height: BtnSize)
-            superV.addSubview(list[index])
+            viewList[index].frame = CGRect(x: col * width, y: row * width, width: width, height: width)
         }
     }
-    
-    
     
     // UI인스턴스 프레임 설정 메소드
     private func updateLayout()
     {
-        let margin: CGFloat = 100
-        let BtnSize: CGFloat = self.view.frame.size.width / 4
-        let offset: CGFloat = self.view.frame.size.height - BtnSize*5
+        // 화면 위에서부터 여백 설정
+        let topMargin: CGFloat = 30
+        // 버튼은 화면의 가로에 4개씩 배치
+        let btnSize: CGFloat = self.view.frame.size.width / 4
+        // 화면 아래에서부터 배치
+        let offset: CGFloat = self.view.frame.size.height - btnSize*5
+        //====================================================================
+        // 키패드 영역 프레임 설정
+        keyPadView.frame = CGRect(x: 0, y: offset, width: view.frame.size.width, height: btnSize*5)
+        // 디스플레이 영역 프레임 설정
+        let displayHeight = offset - topMargin
+        displayView.frame = CGRect(x: 0, y: topMargin, width: view.frame.size.width, height: displayHeight)
+        //====================================================================
+        // <KeyPadView 내부 영역 프레임 설정>
         
-        // self.view 영역 프레임 설정
-        keyPadView.frame = CGRect(x: 0, y: offset, width: view.frame.size.width, height: BtnSize*5)
-        displayView.frame = CGRect(x: 0, y: margin, width: view.frame.size.width, height: offset-margin)
-        
-        // KeyPadView 내부 영역 프레임 설정
-        etcView.frame = CGRect(x: 0, y: 0, width: BtnSize*3, height: BtnSize)
-        operview.frame = CGRect(x: BtnSize*3, y: 0, width: BtnSize, height: BtnSize*5)
-        numberPadView.frame = CGRect(x: 0, y: BtnSize, width: BtnSize*3, height: BtnSize*4)
+        // etc 영역 프레임 설정
+        etcView.frame = CGRect(x: 0, y: 0, width: btnSize*3, height: btnSize)
+        // 연산자 영역 프레임 설정
+        operView.frame = CGRect(x: btnSize*3, y: 0, width: btnSize, height: btnSize*5)
+        // 숫자패드 영역 프레임 설정
+        numberPadView.frame = CGRect(x: 0, y: btnSize, width: btnSize*3, height: btnSize*4)
     }
     
+    @objc func etcHandler(_ sender: UIButton)
+    {
+        print(sender.tag)
+        print(sender.titleLabel?.text)
+    }
     
+    @objc func operHandler(_ sender: UIButton)
+    {
+        print(sender.tag)
+        print(sender.titleLabel?.text)
+    }
     
+    @objc func numberPadHandler(_ sender: UIButton)
+    {
+        sender.backgroundColor = .clear
+        print(sender.tag)
+        print(sender.titleLabel?.text)
+    }
+    
+    @objc func numberDown(_ sender: UIButton)
+    {
+        sender.backgroundColor = .white
+    }
     
     
     override func didReceiveMemoryWarning() {
