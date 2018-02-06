@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF050C862029DF88000D5C3E /* CustomSampleRepeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF050C852029DF88000D5C3E /* CustomSampleRepeat.swift */; };
 		FF6566D32023F33500F4156A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6566D22023F33500F4156A /* AppDelegate.swift */; };
 		FF6566D52023F33500F4156A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6566D42023F33500F4156A /* ViewController.swift */; };
 		FF6566D82023F33500F4156A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF6566D62023F33500F4156A /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF050C852029DF88000D5C3E /* CustomSampleRepeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSampleRepeat.swift; sourceTree = "<group>"; };
 		FF6566CF2023F33500F4156A /* CustomViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF6566D22023F33500F4156A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF6566D42023F33500F4156A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				FF6566D22023F33500F4156A /* AppDelegate.swift */,
 				FF6566D42023F33500F4156A /* ViewController.swift */,
 				FF65670120242D5A00F4156A /* MatrixPractice.swift */,
+				FF050C852029DF88000D5C3E /* CustomSampleRepeat.swift */,
 				FF6566D92023F33500F4156A /* Assets.xcassets */,
 				FF6566F920240E8100F4156A /* CustomView.swift */,
 				FF6566F7202408C300F4156A /* MyCustomView.swift */,
@@ -188,6 +191,7 @@
 				FF65670220242D5A00F4156A /* MatrixPractice.swift in Sources */,
 				FF6566D52023F33500F4156A /* ViewController.swift in Sources */,
 				FF6566FA20240E8100F4156A /* CustomView.swift in Sources */,
+				FF050C862029DF88000D5C3E /* CustomSampleRepeat.swift in Sources */,
 				FF6566F8202408C300F4156A /* MyCustomView.swift in Sources */,
 				FF6566D32023F33500F4156A /* AppDelegate.swift in Sources */,
 			);

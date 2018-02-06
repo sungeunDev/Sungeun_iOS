@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         fourthTest = MatrixPractice.init(frame: CGRect(x: marginX, y: marginY, width: 150, height: 200))
         fourthTest.title(title: "네번째", subtitle: "라이언")
         fourthTest.image(named: "ryan")
-        fourthTest.addTarget(self, action: #selector(touchUp(_:)), for: .touchUpInside)
+//        fourthTest.addTarget(self, action: #selector(self.btn(_:)), for: .touchUpInside)
         fourthTest.tag(4)
         self.view.addSubview(fourthTest)
         

@@ -17,4 +17,16 @@
 
 
 ## ㅁ Week 3. 객체지향 프로그래밍
-* [180122-23 클래스&구조체]()
+* [180122-23 클래스&구조체](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Class/180122-23%20Class:Structure/180122-23.md)
+* [180124 옵셔널](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Class/180124%20Optional/180124.md)
+* [180125 프로퍼티](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Class/180125%20Property/180125.md)
+
+
+## ㅁ Week 4. 기초 UI
+* [UIView]()
+* [UILabel * Button]()
+
+## ㅁ Week 5. Application Life Cycle
+* [180205-6 Application Life Cycle & Delegate]()
+    - UITextField
+    - UIScrollView

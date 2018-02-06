@@ -10,21 +10,26 @@ import UIKit
 
 class MatrixPractice: UIView {
     
+    var delegate: ItemViewDelegate?
+    
+    
     private var view: UIView!
     private var imageView: UIImageView!
     private var button: UIButton!
     private var titleLb: UILabel!
     private var subTitleLb: UILabel!
     
+    var name: String?
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.name = delegate?.matrixName()
         create()
         makeFrame()
     }
     
 // UIView 의 크기가 변경되면, 크기가 변경된 UIView 의 서브뷰들은 위치와 크기가 조정되어야 한다. UIView 는 이를 위해 자동과 수동으로 UIView 의 layout을 조정하는 방법을 제공
     override func layoutSubviews() {
-        super.layoutSubviews()
+         super.layoutSubviews()
         makeFrame()
     }
     
@@ -42,6 +47,7 @@ class MatrixPractice: UIView {
         
         titleLb = UILabel()
         titleLb.font = UIFont.systemFont(ofSize: 25, weight: .bold)
+        titleLb.text = self.name
         titleLb.textColor = .black
         titleLb.textAlignment = .center
         view.addSubview(titleLb)
@@ -77,6 +83,11 @@ class MatrixPractice: UIView {
         button.addTarget(target, action: action, for: controlEvents)
     }
     
+    @objc func btnAction(_ sender: UIButton)
+    {
+        delegate?.didSelectedItem?(self)
+    }
+    
     func title(title: String?, subtitle: String?){
         if let title = title, let subtitle = subtitle
         {
@@ -93,8 +104,10 @@ class MatrixPractice: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    
-    
+}
+
+// 내부에 @objc func 작성시, protocol 앞에도 @objc 작성해야 함.
+@objc protocol ItemViewDelegate{
+    func matrixName() -> String
+    @objc optional func didSelectedItem(_ item: MatrixPractice)
 }
