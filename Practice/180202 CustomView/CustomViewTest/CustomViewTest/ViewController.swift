@@ -9,14 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    var firstTest: MatrixPractice!
-    var secondTest: MatrixPractice!
-    var thirdTest: MatrixPractice!
-    var fourthTest: MatrixPractice!
-    
-    var iconList: [MatrixPractice] = []
-    
+    //
+    //    var firstTest: MatrixPractice!
+    //    var secondTest: MatrixPractice!
+    //    var thirdTest: MatrixPractice!
+    //    var fourthTest: MatrixPractice!
+    //
+    //    var iconList: [MatrixPractice] = []
+    //
     //    var basic : CustomView!
     //    var ryan: CustomView!
     //    var con: CustomView!
@@ -26,75 +26,115 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var marginX = 50
-        var marginY = 150
-        let offset = 15
         
-        firstTest = MatrixPractice.init(frame: CGRect(x: marginX, y: marginY, width: 150, height: 200))
-        firstTest.title(title: "첫번째", subtitle: "콘")
-        firstTest.image(named: "con.jpg")
-        firstTest.addTarget(self, action: #selector(touchUp(_:)), for: .touchUpInside)
-        firstTest.tag(1)
-        self.view.addSubview(firstTest)
+        makeItem(with: 6)
         
-        marginX += offset + 150
-        secondTest = MatrixPractice.init(frame: CGRect(x: marginX, y: marginY, width: 150, height: 200))
-        secondTest.title(title: "두번째", subtitle: "카카오친구들")
-        secondTest.image(named: "kakaoFrd")
-        secondTest.addTarget(self, action: #selector(touchUp(_:)), for: .touchUpInside)
-        secondTest.tag(2)
-        self.view.addSubview(secondTest)
-        
-        marginX -= offset + 150
-        marginY += offset + 150
-        thirdTest = MatrixPractice.init(frame: CGRect(x: marginX, y: marginY, width: 150, height: 200))
-        thirdTest.title(title: "세번째", subtitle: "어피치")
-        thirdTest.image(named: "appeach")
-        thirdTest.addTarget(self, action: #selector(touchUp(_:)), for: .touchUpInside)
-        thirdTest.tag(3)
-        self.view.addSubview(thirdTest)
-        
-        marginX += offset + 150
-        fourthTest = MatrixPractice.init(frame: CGRect(x: marginX, y: marginY, width: 150, height: 200))
-        fourthTest.title(title: "네번째", subtitle: "라이언")
-        fourthTest.image(named: "ryan")
-//        fourthTest.addTarget(self, action: #selector(self.btn(_:)), for: .touchUpInside)
-        fourthTest.tag(4)
-        self.view.addSubview(fourthTest)
-        
-        iconList = [firstTest, secondTest, thirdTest, fourthTest]
-        arrangeMatrix(list: iconList, column: 2, btnSize: 180)
+        //        let item: CustomSampleRepeat!
+        //        item = CustomSampleRepeat(frame: CGRect(x: 40, y: 40, width: 100, height: 100))
+        //        item.img = #imageLiteral(resourceName: "con.jpg")
+        //        item.btnTitle = "안녕"
+        //        item.addTarget(self, action: #selector(printFunc(_:)), for: .touchUpInside)
+        //        view.addSubview(item)
         
     }
     
-    // MatrixPractice 를 받아오는 것 같지만 실제로는 UIButton을 받는 것
-    @objc func touchUp(_ sender: UIButton){
-        print("\(sender.tag) 버튼을 클릭하였습니다.")
-        //        print("아무 일도 일어나지 않았다.")
-    }
-    
-    func makeList(count: Int) -> [MatrixPractice] {
-        var returnResult: [MatrixPractice] = []
+    func makeItem(with count: Int)
+    {
+       for index in 0..<count
+       {
+            let col = index % 2
+            let row = index / 2
+            let margin = 30
         
-        for index in 0..<count
-        {
-            let matrix: MatrixPractice = MatrixPractice()
-            matrix.tag = index
-            returnResult.append(matrix)
-        }
-        return returnResult
-    }
-    
-    func arrangeMatrix(list: [MatrixPractice], column: Int, btnSize: CGFloat){
-        
-        for index in 0..<list.count
-        {
-            let col = CGFloat(index % column)
-            let row = CGFloat(index / column)
-            
-            list[index].frame = CGRect(x: col*btnSize, y: row*btnSize, width: btnSize, height: btnSize)
+            let item: CustomSampleRepeat!
+            item = CustomSampleRepeat(frame: CGRect(x: margin*(col+1) + col*150,
+                                                    y: margin*(row+1) + row*150,
+                                                    width: 150,
+                                                    height: 150))
+            item.img = #imageLiteral(resourceName: "con.jpg")
+            item.btnTitle = "안녕"
+            item.index = index
+            item.addTarget(self, action: #selector(printFunc(_:)), for: .touchUpInside)
+            view.addSubview(item)
         }
     }
+    
+    
+    
+    //        var marginX = 50
+    //        var marginY = 150
+    //        let offset = 15
+    //
+    //        firstTest = MatrixPractice.init(frame: CGRect(x: marginX, y: marginY, width: 150, height: 200))
+    //        firstTest.title(title: "첫번째", subtitle: "콘")
+    //        firstTest.image(named: "con.jpg")
+    //        firstTest.addTarget(self, action: #selector(touchUp(_:)), for: .touchUpInside)
+    //        firstTest.tag(1)
+    //        self.view.addSubview(firstTest)
+    //
+    //        marginX += offset + 150
+    //        secondTest = MatrixPractice.init(frame: CGRect(x: marginX, y: marginY, width: 150, height: 200))
+    //        secondTest.title(title: "두번째", subtitle: "카카오친구들")
+    //        secondTest.image(named: "kakaoFrd")
+    //        secondTest.addTarget(self, action: #selector(touchUp(_:)), for: .touchUpInside)
+    //        secondTest.tag(2)
+    //        self.view.addSubview(secondTest)
+    //
+    //        marginX -= offset + 150
+    //        marginY += offset + 150
+    //        thirdTest = MatrixPractice.init(frame: CGRect(x: marginX, y: marginY, width: 150, height: 200))
+    //        thirdTest.title(title: "세번째", subtitle: "어피치")
+    //        thirdTest.image(named: "appeach")
+    //        thirdTest.addTarget(self, action: #selector(touchUp(_:)), for: .touchUpInside)
+    //        thirdTest.tag(3)
+    //        self.view.addSubview(thirdTest)
+    //
+    //        marginX += offset + 150
+    //        fourthTest = MatrixPractice.init(frame: CGRect(x: marginX, y: marginY, width: 150, height: 200))
+    //        fourthTest.title(title: "네번째", subtitle: "라이언")
+    //        fourthTest.image(named: "ryan")
+    ////        fourthTest.addTarget(self, action: #selector(self.btn(_:)), for: .touchUpInside)
+    //        fourthTest.tag(4)
+    //        self.view.addSubview(fourthTest)
+    //
+    //        iconList = [firstTest, secondTest, thirdTest, fourthTest]
+    //        arrangeMatrix(list: iconList, column: 2, btnSize: 180)
+    
+    
+    
+    @objc func printFunc(_ sender: UIButton) {
+        print(sender.tag)
+    }
+    
+    
+    //    // MatrixPractice 를 받아오는 것 같지만 실제로는 UIButton을 받는 것
+    //    @objc func touchUp(_ sender: UIButton){
+    //        print("\(sender.tag) 버튼을 클릭하였습니다.")
+    //        //        print("아무 일도 일어나지 않았다.")
+    //    }
+    //
+    //    func makeList(count: Int) -> [MatrixPractice] {
+    //        var returnResult: [MatrixPractice] = []
+    //
+    //        for index in 0..<count
+    //        {
+    //            let matrix: MatrixPractice = MatrixPractice()
+    //            matrix.tag = index
+    //            returnResult.append(matrix)
+    //        }
+    //        return returnResult
+    //    }
+    //
+    //    func arrangeMatrix(list: [MatrixPractice], column: Int, btnSize: CGFloat){
+    //
+    //        for index in 0..<list.count
+    //        {
+    //            let col = CGFloat(index % column)
+    //            let row = CGFloat(index / column)
+    //
+    //            list[index].frame = CGRect(x: col*btnSize, y: row*btnSize, width: btnSize, height: btnSize)
+    //        }
+    //    }
     
     
     

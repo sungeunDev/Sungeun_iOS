@@ -15,6 +15,31 @@ class ViewController: UIViewController {
         
     }
 
+    func create()
+    {
+        
+        
+        
+    }
+    
+    func makeItem()
+    {
+        var bgColorNum: Int = Int(arc4random_uniform(3))
+        var shapeNum: Int = Int(arc4random_uniform(3))
+        var shapeColorNum: Int = Int(arc4random_uniform(3))
+        
+        switch bgColor {
+        case 0:
+            <#code#>
+        default:
+            <#code#>
+        }
+    }
+    
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
