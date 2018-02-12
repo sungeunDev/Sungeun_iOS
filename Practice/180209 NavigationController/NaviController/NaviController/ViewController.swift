@@ -65,27 +65,55 @@ class ViewController: UIViewController {
     }
     
     @IBAction func add(_ sender: Any) {
-//        if var list = UserDefaults.standard.array(forKey: key) as? [String]
-//        {
-//            list.append(mainTf.text!)
-//            UserDefaults.standard.set(list, forKey: key)
-//        } else
-//        {
-//            let newNameList = [mainTf.text]
-//            UserDefaults.standard.set(newNameList, forKey: key)
-//        }
-        if var list2 = UserDefaults.standard.bool(forKey: <#T##String#>)
+        //        if var list = UserDefaults.standard.array(forKey: key) as? [String]
+        //        {
+        //            list.append(mainTf.text!)
+        //            UserDefaults.standard.set(list, forKey: key)
+        //        } else
+        //        {
+        //            let newNameList = [mainTf.text]
+        //            UserDefaults.standard.set(newNameList, forKey: key)
+        //        }
         
         
-                if var list2 = UserDefaults.standard.array(forKey: "회원가입") as? [[String: String]]
+        
+        
+        if var list2 = UserDefaults.standard.array(forKey: "회원가입") as? [[String: String]]
+        {
+            var idCheck = false
+            for index in 0..<list2.count
+            {
+                if list2[index]["id"] == mainTf.text
                 {
-                    list2.append([mainTf.text!:"id", pwTf.text!:"pw"])
-                    UserDefaults.standard.set(list2, forKey: "회원가입")
-                } else
-                {
-                    let newNameList = [mainTf.text!:"id", pwTf.text!:"pw"]
-                    UserDefaults.standard.set([newNameList], forKey: "회원가입")
+                    idCheck = true
+                    break
                 }
+            }
+            
+            if idCheck == true
+            {
+                let alertVC = UIAlertController(title: "이미 같은 아이디가 있습니다.", message: "다른 아이디를 입력해 주세요.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "확인", style: .default, handler: { (action) in
+                })
+                alertVC.addAction(ok)
+                self.present(alertVC, animated: true, completion: nil)
+                print("이미 같은 아이디가 있습니다.")
+            } else
+            {
+                list2.append(["id":mainTf.text!, "pw":pwTf.text!])
+                UserDefaults.standard.set(list2, forKey: "회원가입")
+                let alertVC2 = UIAlertController(title: "회원가입 완료되었습니다.", message: "로그인을 해주세요.", preferredStyle: .alert)
+                let ok2 = UIAlertAction(title: "확인", style: .default, handler: { (action) in
+                })
+                alertVC2.addAction(ok2)
+                self.present(alertVC2, animated: true, completion: nil)
+                print("회원가입 완료되었습니다.")
+            }
+        } else
+        {
+            let newNameList = ["id":mainTf.text!, "pw":pwTf.text!]
+            UserDefaults.standard.set([newNameList], forKey: "회원가입")
+        }
     }
     
     //        func dic()
@@ -99,40 +127,46 @@ class ViewController: UIViewController {
     //        }
     
     @IBAction func printAction(_ sender: Any) {
-//        if var list = UserDefaults.standard.array(forKey: key) as? [String]
-//        {
-//            print(list)
-            //            for name in list
-            //            {
-            //                if mainTf.text == name
-            //                {
-            //                    print("찾았다.")
-            //                } else
-            //                {
-            //                    print("없다.")
-            //                }
-            //            }
-            
+        //        if var list = UserDefaults.standard.array(forKey: key) as? [String]
+        //        {
+        //            print(list)
+        //            for name in list
+        //            {
+        //                if mainTf.text == name
+        //                {
+        //                    print("찾았다.")
+        //                } else
+        //                {
+        //                    print("없다.")
+        //                }
+        //            }
+        
         if var list2 = UserDefaults.standard.array(forKey: "회원가입") as? [[String: String]]
         {print(list2)}
-        }
+    }
     
     
-        @IBAction func loginAction(_ sender: Any) {
-            if var list2 = UserDefaults.standard.array(forKey: "회원가입") as? [[String: String]]
+    @IBAction func loginAction(_ sender: Any) {
+        if var list2 = UserDefaults.standard.array(forKey: "회원가입") as? [[String: String]]
+        {
+            var loginCheck = false
+            for index in 0..<list2.count
             {
-                for index in 0..<list2.count
+                if list2[index]["id"] == mainTf.text && list2[index]["pw"] == pwTf.text
                 {
-                    if list2[index]["id"] == mainTf.text && list2[index]["pw"] == pwTf.text
-                    {
-                        print("로그인하세요")
-                    } else
-                    {
-                       print("아이디랑 비번이 일치하지 않습니다.")
-                    }
+                   loginCheck = true
                 }
             }
+            if loginCheck == true
+            {
+                let alert = UIAlertController(title: "아이디, 패스워드를 잘못 입력하였습니다.", message: "다시 로그인해 주세요.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "확인", style: .default, handler: { (action) in
+                })
+                alert.addAction(ok)
+                self.present(alert, animated: true, completion: nil)
+            }
         }
+    }
     
     @IBAction func removeBtn(_ sender: Any) {
         UserDefaults.standard.removeObject(forKey: "회원가입")
