@@ -21,6 +21,7 @@
 		FF1A2C022031775900626E01 /* clubsJack.png in Resources */ = {isa = PBXBuildFile; fileRef = FF1A2BF52031775900626E01 /* clubsJack.png */; };
 		FF1A2C032031775900626E01 /* clubs7.png in Resources */ = {isa = PBXBuildFile; fileRef = FF1A2BF62031775900626E01 /* clubs7.png */; };
 		FF1A2C0720317B4700626E01 /* cardBack.png in Resources */ = {isa = PBXBuildFile; fileRef = FF1A2C0620317B4700626E01 /* cardBack.png */; };
+		FF1A2C0A2032D9B500626E01 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF1A2C092032D9B500626E01 /* LoginViewController.swift */; };
 		FF78B35A20306C110055F8EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF78B35920306C110055F8EB /* AppDelegate.swift */; };
 		FF78B35C20306C110055F8EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF78B35B20306C110055F8EB /* ViewController.swift */; };
 		FF78B35F20306C110055F8EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF78B35D20306C110055F8EB /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		FF1A2BF52031775900626E01 /* clubsJack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clubsJack.png; sourceTree = "<group>"; };
 		FF1A2BF62031775900626E01 /* clubs7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clubs7.png; sourceTree = "<group>"; };
 		FF1A2C0620317B4700626E01 /* cardBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cardBack.png; sourceTree = "<group>"; };
+		FF1A2C092032D9B500626E01 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FF78B35620306C110055F8EB /* BlackJackSE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlackJackSE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF78B35920306C110055F8EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF78B35B20306C110055F8EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF1A2C082032CC4D00626E01 /* clubsCard */ = {
+			isa = PBXGroup;
+			children = (
+				FF1A2BED2031775800626E01 /* clubs2.png */,
+				FF1A2BF02031775900626E01 /* clubs3.png */,
+				FF1A2BF32031775900626E01 /* clubs4.png */,
+				FF1A2BEB2031775800626E01 /* clubs5.png */,
+				FF1A2BEC2031775800626E01 /* clubs6.png */,
+				FF1A2BF62031775900626E01 /* clubs7.png */,
+				FF1A2BEA2031775800626E01 /* clubs8.png */,
+				FF1A2BEF2031775900626E01 /* clubs9.png */,
+				FF1A2BF22031775900626E01 /* clubs10.png */,
+				FF1A2BF12031775900626E01 /* clubsAce.png */,
+				FF1A2BF52031775900626E01 /* clubsJack.png */,
+				FF1A2BEE2031775900626E01 /* clubsKing.png */,
+				FF1A2BF42031775900626E01 /* clubsQueen.png */,
+			);
+			path = clubsCard;
+			sourceTree = "<group>";
+		};
 		FF78B34D20306C110055F8EB = {
 			isa = PBXGroup;
 			children = (
@@ -85,23 +107,12 @@
 				FF78B35920306C110055F8EB /* AppDelegate.swift */,
 				FF78B35B20306C110055F8EB /* ViewController.swift */,
 				FF78B35D20306C110055F8EB /* Main.storyboard */,
+				FF1A2C092032D9B500626E01 /* LoginViewController.swift */,
 				FF78B36020306C110055F8EB /* Assets.xcassets */,
 				FF78B36220306C110055F8EB /* LaunchScreen.storyboard */,
 				FF78B36520306C110055F8EB /* Info.plist */,
 				FF1A2C0620317B4700626E01 /* cardBack.png */,
-				FF1A2BED2031775800626E01 /* clubs2.png */,
-				FF1A2BF02031775900626E01 /* clubs3.png */,
-				FF1A2BF32031775900626E01 /* clubs4.png */,
-				FF1A2BEB2031775800626E01 /* clubs5.png */,
-				FF1A2BEC2031775800626E01 /* clubs6.png */,
-				FF1A2BF62031775900626E01 /* clubs7.png */,
-				FF1A2BEA2031775800626E01 /* clubs8.png */,
-				FF1A2BEF2031775900626E01 /* clubs9.png */,
-				FF1A2BF22031775900626E01 /* clubs10.png */,
-				FF1A2BF12031775900626E01 /* clubsAce.png */,
-				FF1A2BF52031775900626E01 /* clubsJack.png */,
-				FF1A2BEE2031775900626E01 /* clubsKing.png */,
-				FF1A2BF42031775900626E01 /* clubsQueen.png */,
+				FF1A2C082032CC4D00626E01 /* clubsCard */,
 			);
 			path = BlackJackSE;
 			sourceTree = "<group>";
@@ -192,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF1A2C0A2032D9B500626E01 /* LoginViewController.swift in Sources */,
 				FF78B35C20306C110055F8EB /* ViewController.swift in Sources */,
 				FF78B35A20306C110055F8EB /* AppDelegate.swift in Sources */,
 			);

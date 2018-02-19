@@ -36,15 +36,22 @@ class ViewController: UIViewController {
     
     // 버튼
     @IBOutlet weak var nextBtn: UIButton!
+    @IBOutlet weak var hitBtn: UIButton!
     
     // 게임 단계 설명 Lb
     @IBOutlet weak var gameStatusLb: UILabel!
     
+    // 라운드, 점수 체크 Lb
+    @IBOutlet weak var roundLb: UILabel!
+    @IBOutlet weak var dealerScore: UILabel!
+    @IBOutlet weak var userScore: UILabel!
+    var roundCount: Int = 1
+    var userScoreCount: Int = 0
+    var dealerScoreCount: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    
     
     // start 버튼 액션
     // 클릭시 랜덤으로 카드 4장을 뽑아서 유저와 딜러에게 각 2장씩 나누어 줌.
@@ -84,7 +91,8 @@ class ViewController: UIViewController {
             Hit, Stand 중 하나의 버튼을 선택해 주세요.
             Hit : 카드 1장 추가 / Stand : 카드 그만받기
             """
-            
+            hitBtn.tag = 0
+            hitBtn.addTarget(self, action: #selector(hitBtnAction(_:)), for: .touchUpInside)
         }
         
         print(gameDeck)
@@ -104,34 +112,20 @@ class ViewController: UIViewController {
         return numList
     }
     
-    //----<randomNum> 초기 버전. contains 기능 까먹었을때!-----//
-    //    func randomNum() {
-    //        var randomNum: UInt32 = arc4random_uniform(13)
-    //        var selectArray: [Int] = []
-    //        selectArray.append(Int(randomNum)+1)
-    //        var checkDuplicate: Bool?
-    //        while selectArray.count < 4 {
-    //            for index in 0..<selectArray.count
-    //            {
-    //                if selectArray[index] == (Int(randomNum) + 1)
-    //                {
-    //                    checkDuplicate = true
-    //                } else
-    //                {
-    //                    checkDuplicate = false
-    //                }
-    //            }
-    //            if checkDuplicate == false
-    //            {
-    //                selectArray.append(Int(randomNum) + 1)
-    //            } else
-    //            {
-    //                let newRandomNum: UInt32 = arc4random_uniform(13)
-    //                randomNum = newRandomNum
-    //            }
-    //        }
-    //    }
+//    func randomShapeNnum() {
+//        var numList: [[Int]] = [[]]
+//        for index in 0..<4
+//        {
+//            while numList[index].count != 13 {
+//                let randomNum: Int = Int(arc4random_uniform(13)) + 1
+//                if !numList[index].contains(randomNum) {
+//                    numList[index].append(randomNum)
+//                }
+//            }
+//        }
+//    }
     
+    // 카드 덱을 많이 추가해야 하는데에에에.
     // 선택된 카드의 이미지 나오게 하는 함수
     func selectCardImg(cardNum: Int, view: UIImageView) -> UIImageView
     {
@@ -184,27 +178,22 @@ class ViewController: UIViewController {
         case 10:
             userNum3 = selectCardImg(cardNum: userDeck[2], view: userNum3)
             userDeckSumCheck()
+        case 11:
+            userNum4 = selectCardImg(cardNum: userDeck[3], view: userNum4)
+            userDeckSumCheck()
+        case 12:
+            userNum5 = selectCardImg(cardNum: userDeck[4], view: userNum5)
+            userDeckSumCheck()
             
         // 20~ : 카드 공개
         case 20:
-            dealerNum2 = selectCardImg(cardNum: dealerDeck[1], view: dealerNum2)
-            switch dealerDeck.count {
-            case 3:
-                dealerNum3 = selectCardImg(cardNum: dealerDeck[2], view: dealerNum3)
-            case 4:
-                dealerNum3 = selectCardImg(cardNum: dealerDeck[2], view: dealerNum3)
-                dealerNum4 = selectCardImg(cardNum: dealerDeck[3], view: dealerNum4)
-            case 5:
-                dealerNum3 = selectCardImg(cardNum: dealerDeck[2], view: dealerNum3)
-                dealerNum4 = selectCardImg(cardNum: dealerDeck[3], view: dealerNum4)
-                dealerNum5 = selectCardImg(cardNum: dealerDeck[4], view: dealerNum5)
-            default:
-                print("error")
-            }
+            dealerCardOpen()
+        case 21:
+            dealerCardOpen()
             gameResult()
             
         default:
-            print("error")
+            print("nextBtn error")
         }
     }
     
@@ -217,7 +206,6 @@ class ViewController: UIViewController {
             nextBtn.tag += 1
         } else
         {
-            nextBtn.tag = 10
             gameStatusLb.text =
             """
             딜러 카드의 합이 17 이상입니다.
@@ -245,27 +233,39 @@ class ViewController: UIViewController {
     }
     
     // hit 버튼 액션
-    @IBAction func hitBtnAction(_ sender: Any) {
-        
+    @objc func hitBtnAction(_ sender: UIButton) {
         gameStatusLb.text =
         """
-        hit 버튼을 눌렀습니다. 카드를 한 장 더 받습니다.
+        hit 버튼을 눌렀습니다.
         next 버튼을 누르면 받은 카드를 공개합니다.
         """
-        cardPass(who: "user")
-        userNum3.image = UIImage(named: "cardBack.png")
-        nextBtn.tag = 10
+        switch hitBtn.tag {
+        case 0:
+            cardPass(who: "user")
+            userNum3.image = UIImage(named: "cardBack.png")
+            nextBtn.tag = 10
+            nextBtn.addTarget(self, action: #selector(nextBtnAction(_:)), for: .touchUpInside)
+        case 1:
+            cardPass(who: "user")
+            userNum4.image = UIImage(named: "cardBack.png")
+            nextBtn.tag = 11
+        case 2:
+            cardPass(who: "user")
+            userNum5.image = UIImage(named: "cardBack.png")
+            nextBtn.tag = 12
+        default:
+            print("error hitBtnAction")
+        }
+        
     }
-    
-    
     
     // stand 버튼 액션
     @IBAction func standBtnAction(_ sender: Any) {
-        nextBtn.tag = 20
+        nextBtn.tag = 21
         gameStatusLb.text =
         """
         stand 버튼을 눌렀습니다.
-        next 버튼을 누르면 카드를 공개합니다.
+        next 버튼을 누르면 딜러 카드를 오픈합니다.
         """
     }
     
@@ -274,17 +274,37 @@ class ViewController: UIViewController {
         userCardSum = cardSum(userDeck)
         if userCardSum > 21
         {
+            nextBtn.tag = 21
             gameStatusLb.text =
             """
             카드의 합이 21을 초과했습니다.
-            게임에서 패배하였습니다.
+            next 버튼을 누르면 딜러 카드를 오픈합니다.
             """
+            //            let burstAlert = UIAlertController(title: "BURST !!!", message:
+            //                """
+            //                카드의 합이 21을 초과했습니다.
+            //                게임에서 패배하였습니다.
+            //                확인 버튼을 누르면 딜러 카드를 오픈합니다.
+            //                """, preferredStyle: .alert)
+            //            let confirmAction = UIAlertAction(title: "확인", style: .default, handler: { (action) in
+            //                self.dealerCardOpen()
+            //                self.gameStatusLb.text =
+            //                """
+            //                게임이 종료되었습니다.
+            //                """
+            //            })
+            //            let cancleAction = UIAlertAction(title: "취소", style: .destructive, handler: nil)
+            //            burstAlert.addAction(confirmAction)
+            //            burstAlert.addAction(cancleAction)
+            //            self.present(burstAlert, animated: true, completion: nil)
+            
         } else if userCardSum == 21
         {
+            nextBtn.tag = 20
             gameStatusLb.text =
             """
-            카드의 합이 21로 블랙잭입니다!
-            유저가 승리하였습니다.
+            카드의 합이 21입니다.
+            stand 버튼을 눌러주세요.
             """
         } else if userCardSum < 21
         {
@@ -294,44 +314,109 @@ class ViewController: UIViewController {
             카드를 더 받으시려면 hit 버튼을,
             중단하려면 stand 버튼을 눌러주세요.
             """
+            hitBtn.tag += 1
         }
     }
     
+    // 딜러 카드 오픈
+    func dealerCardOpen() {
+        dealerNum2 = selectCardImg(cardNum: dealerDeck[1], view: dealerNum2)
+        switch dealerDeck.count {
+        case 3:
+            dealerNum3 = selectCardImg(cardNum: dealerDeck[2], view: dealerNum3)
+        case 4:
+            dealerNum3 = selectCardImg(cardNum: dealerDeck[2], view: dealerNum3)
+            dealerNum4 = selectCardImg(cardNum: dealerDeck[3], view: dealerNum4)
+        case 5:
+            dealerNum3 = selectCardImg(cardNum: dealerDeck[2], view: dealerNum3)
+            dealerNum4 = selectCardImg(cardNum: dealerDeck[3], view: dealerNum4)
+            dealerNum5 = selectCardImg(cardNum: dealerDeck[4], view: dealerNum5)
+        default:
+            print("sender.tag == 20 error")
+        }
+    }
+    
+    
     // 결과 판단
     func gameResult() {
-        if dealerCardSum > userCardSum
+        roundCount += 1
+        
+        if dealerCardSum > 21 && userCardSum > 21
         {
             gameStatusLb.text =
             """
-            딜러: \(dealerCardSum)점, 유저: \(userCardSum)점으로
-            딜러가 승리하였습니다.
-            """
-        } else if dealerCardSum < userCardSum
-        {
-            gameStatusLb.text =
-            """
-            딜러: \(dealerCardSum)점, 유저: \(userCardSum)점으로
-            유저가 승리하였습니다.
-            """
-        } else if dealerCardSum == userCardSum
-        {
-            gameStatusLb.text =
-            """
-            딜러: \(dealerCardSum)점, 유저: \(userCardSum)점으로
+            딜러, 유저 모두 21점을 초과하였습니다.
             무승부입니다.
             """
+        } else if dealerCardSum > 21 && userCardSum <= 21
+        {
+            gameStatusLb.text =
+            """
+            딜러가 21점을 초과하였습니다.
+            유저가 승리하였습니다.
+            """
+            userScoreCount += 1
+        } else if dealerCardSum <= 21 && userCardSum > 21
+        {
+            gameStatusLb.text =
+            """
+            유저 카드의 합이 21을 초과했습니다.
+            딜러가 승리하였습니다.
+            """
+            dealerScoreCount += 1
+        } else if dealerCardSum <= 21 && userCardSum <= 21
+        {
+            if dealerCardSum > userCardSum
+            {
+                gameStatusLb.text =
+                """
+                딜러: \(dealerCardSum)점, 유저: \(userCardSum)점으로
+                딜러가 승리하였습니다.
+                """
+                dealerScoreCount += 1
+            } else if dealerCardSum < userCardSum
+            {
+                gameStatusLb.text =
+                """
+                딜러: \(dealerCardSum)점, 유저: \(userCardSum)점으로
+                유저가 승리하였습니다.
+                """
+                userScoreCount += 1
+            } else if dealerCardSum == userCardSum
+            {
+                gameStatusLb.text =
+                """
+                딜러: \(dealerCardSum)점, 유저: \(userCardSum)점으로
+                무승부입니다.
+                """
+            }
         }
     }
     
     
     func clear()
     {
+        gameDeck = []
+        userDeck = []
+        dealerDeck = []
+        
         userCardSum = 0
         dealerCardSum = 0
         
         dealerNum3.image = nil
         dealerNum4.image = nil
         dealerNum5.image = nil
+        
+        userNum3.image = nil
+        userNum4.image = nil
+        userNum5.image = nil
+        
+        nextBtn.tag = 0
+        hitBtn.tag = 0
+        
+        roundLb.text = "Round \(roundCount)"
+        dealerScore.text = String(dealerScoreCount)
+        userScore.text = String(userScoreCount)
     }
     
     
