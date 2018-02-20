@@ -123,7 +123,7 @@
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="Qzs-N0-r7W" kind="show" id="N1l-o6-0XM"/>
+                                            <action selector="mainBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9sH-T9-6Xo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="startBtn" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSD-7Z-xZq">
@@ -222,6 +222,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="TvI-Vq-4EB"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -532,7 +533,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="e86-9G-2mi"/>
+                                    <action selector="gameStartAction:" destination="Qzs-N0-r7W" eventType="touchUpInside" id="YYL-GA-wCi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPm-57-mXb">
@@ -542,9 +543,6 @@
                                 <state key="normal" title="코인 충전">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="26k-jr-oJd" kind="show" id="8ZF-eU-r3F"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="환영합니다. idName님 로그인 되었습니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nz-R3-xVS">
                                 <rect key="frame" x="46" y="224" width="283" height="87"/>
@@ -559,6 +557,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="M4x-pf-DA5"/>
                     <connections>
+                        <outlet property="coinBtnAction" destination="vPm-57-mXb" id="B3J-i6-5aw"/>
                         <outlet property="welcomLb" destination="7nz-R3-xVS" id="Ruy-aK-KN4"/>
                     </connections>
                 </viewController>
@@ -570,7 +569,4 @@
     <resources>
         <image name="cardBack.png" width="747" height="1042"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="N1l-o6-0XM"/>
-    </inferredMetricsTieBreakers>
 </document>

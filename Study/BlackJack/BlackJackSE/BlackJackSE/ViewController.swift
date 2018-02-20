@@ -45,13 +45,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var roundLb: UILabel!
     @IBOutlet weak var dealerScore: UILabel!
     @IBOutlet weak var userScore: UILabel!
+    
     var roundCount: Int = 1
     var userScoreCount: Int = 0
     var dealerScoreCount: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        view.backgroundColor = .white
     }
     
     // start 버튼 액션
@@ -105,33 +107,19 @@ class ViewController: UIViewController {
     func randomNum() -> [Int] {
         var numList: [Int] = []
         while numList.count != 4 {
-            let randomNum: Int = Int(arc4random_uniform(13)) + 1
+            let randomNum: Int = Int(arc4random_uniform(52)) + 1
             if !numList.contains(randomNum) {
                 numList.append(randomNum)
             }
         }
         return numList
     }
-    
-//    func randomShapeNnum() {
-//        var numList: [[Int]] = [[]]
-//        for index in 0..<4
-//        {
-//            while numList[index].count != 13 {
-//                let randomNum: Int = Int(arc4random_uniform(13)) + 1
-//                if !numList[index].contains(randomNum) {
-//                    numList[index].append(randomNum)
-//                }
-//            }
-//        }
-//    }
-    
-    // 카드 덱을 많이 추가해야 하는데에에에.
+
     // 선택된 카드의 이미지 나오게 하는 함수
     func selectCardImg(cardNum: Int, view: UIImageView) -> UIImageView
     {
         var cardDeck: [Int:String] = [:]
-        cardDeck = [1:"clubsAce", 2:"clubs2", 3:"clubs3", 4:"clubs4", 5:"clubs5", 6:"clubs6", 7:"clubs7", 8:"clubs8", 9:"clubs9", 10:"clubs10", 11:"clubsJack", 12:"clubsQueen", 13:"clubsKing"]
+        cardDeck = [1:"clubsAce", 2:"clubs2", 3:"clubs3", 4:"clubs4", 5:"clubs5", 6:"clubs6", 7:"clubs7", 8:"clubs8", 9:"clubs9", 10:"clubs10", 11:"clubsJack", 12:"clubsQueen", 13:"clubsKing", 14:"ace_of_diamonds", 15: "2_of_diamonds", 16:"3_of_diamonds", 17:"4_of_diamonds", 18:"5_of_diamonds", 19:"6_of_diamonds", 20:"7_of_diamonds", 21:"8_of_diamonds", 22:"9_of_diamonds", 23:"10_of_diamonds", 24:"jack_of_diamonds2", 25:"queen_of_diamonds2", 26:"king_of_diamonds2", 27:"ace_of_hearts", 28:"2_of_hearts", 29:"3_of_hearts", 30:"4_of_hearts", 31:"5_of_hearts", 32:"6_of_hearts", 33:"7_of_hearts", 34:"8_of_hearts", 35:"9_of_hearts", 36:"10_of_hearts", 37:"jack_of_hearts2", 38:"queen_of_hearts2", 39:"king_of_hearts2", 40:"ace_of_spades2", 41:"2_of_spades", 42:"3_of_spades", 43:"4_of_spades", 44:"5_of_spades", 45:"6_of_spades", 46:"7_of_spades", 47:"8_of_spades", 48:"9_of_spades", 49:"10_of_spades", 50:"jack_of_spades2", 51:"queen_of_spades2", 52:"king_of_spades2"]
         
         let str: String = cardDeck[cardNum]!+".png"
         view.image = UIImage(named: str)
@@ -144,9 +132,10 @@ class ViewController: UIViewController {
         var sum: Int = 0
         for index in 0..<list.count
         {
-            if list[index] <= 10
+            let num = list[index] % 13
+            if num <= 10 && num > 0
             {
-                sum += list[index]
+                sum += num
             } else
             {
                 sum += 10
@@ -240,6 +229,27 @@ class ViewController: UIViewController {
         hit 버튼을 눌렀습니다.
         next 버튼을 누르면 받은 카드를 공개합니다.
         """
+        // # Case. 딜러의 카드 합이 16이하일 때, 딜러가 한장 더 받음.
+        if dealerCardSum <= 16
+        {
+            nextBtn.tag = 0
+            nextBtn.addTarget(self, action: #selector(nextBtnAction(_:)), for: .touchUpInside)
+            gameStatusLb.text =
+            """
+            딜러가 한장의 카드를 더 받습니다.
+            Next 버튼을 눌러주세요.
+            """
+        } else
+        {
+            gameStatusLb.text =
+            """
+            Hit, Stand 중 하나의 버튼을 선택해 주세요.
+            Hit : 카드 1장 추가 / Stand : 카드 그만받기
+            """
+            hitBtn.tag = 0
+            hitBtn.addTarget(self, action: #selector(hitBtnAction(_:)), for: .touchUpInside)
+        }
+        
         switch hitBtn.tag {
         case 0:
             cardPass(who: "user")
@@ -281,24 +291,6 @@ class ViewController: UIViewController {
             카드의 합이 21을 초과했습니다.
             next 버튼을 누르면 딜러 카드를 오픈합니다.
             """
-            //            let burstAlert = UIAlertController(title: "BURST !!!", message:
-            //                """
-            //                카드의 합이 21을 초과했습니다.
-            //                게임에서 패배하였습니다.
-            //                확인 버튼을 누르면 딜러 카드를 오픈합니다.
-            //                """, preferredStyle: .alert)
-            //            let confirmAction = UIAlertAction(title: "확인", style: .default, handler: { (action) in
-            //                self.dealerCardOpen()
-            //                self.gameStatusLb.text =
-            //                """
-            //                게임이 종료되었습니다.
-            //                """
-            //            })
-            //            let cancleAction = UIAlertAction(title: "취소", style: .destructive, handler: nil)
-            //            burstAlert.addAction(confirmAction)
-            //            burstAlert.addAction(cancleAction)
-            //            self.present(burstAlert, animated: true, completion: nil)
-            
         } else if userCardSum == 21
         {
             nextBtn.tag = 20
@@ -415,17 +407,86 @@ class ViewController: UIViewController {
         nextBtn.tag = 0
         hitBtn.tag = 0
         
-        roundLb.text = "Round \(roundCount)"
-        dealerScore.text = String(dealerScoreCount)
-        userScore.text = String(userScoreCount)
+        gameHistory()
+        
+        // 라운드, 스코어 저장
+        if var userInfo = UserDefaults.standard.array(forKey: UserInfoKey) as? [[String:String]], let userID = UserDefaults.standard.string(forKey: "userID")
+        {
+            for index in 0..<userInfo.count
+            {
+                if userInfo[index]["id"] == userID
+                {
+                    if let round = userInfo[index]["round"]
+                    {
+                        roundLb.text = "Round \(round)"
+                        dealerScore.text = userInfo[index]["dealerScore"]
+                        userScore.text = userInfo[index]["userScore"]
+                    } else
+                    {
+                        roundLb.text = "Round \(roundCount)"
+                        dealerScore.text = String(dealerScoreCount)
+                        userScore.text = String(userScoreCount)
+                    }
+                    break
+                }
+            }
+        }
     }
     
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func mainBtnAction(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    // 라운드, 스코어 저장
+    private func gameHistory() {
+        if var userInfo = UserDefaults.standard.array(forKey: UserInfoKey) as? [[String:String]], let userID = UserDefaults.standard.string(forKey: "userID")
+        {
+            for index in 0..<userInfo.count
+            {
+                if userInfo[index]["id"] == userID
+                {
+                    if let _ = userInfo[index]["round"]
+                    {
+                        userInfo[index].updateValue(String(userScoreCount), forKey: "userScore")
+                        userInfo[index].updateValue(String(dealerScoreCount), forKey: "dealerScore")
+                        userInfo[index].updateValue(String(roundCount), forKey: "round")
+                        UserDefaults.standard.set(userInfo, forKey: UserInfoKey)
+                        print(userInfo[index])
+                    }
+                }
+            }
+        }
     }
     
     
+    // 라운드, 스코어 저장
+    override func viewWillAppear(_ animated: Bool) {
+        if var userInfo = UserDefaults.standard.array(forKey: UserInfoKey) as? [[String:String]], let userID = UserDefaults.standard.string(forKey: "userID")
+        {
+            for index in 0..<userInfo.count
+            {
+                if userInfo[index]["id"] == userID
+                {
+                    if let round = userInfo[index]["round"]
+                    {
+                        roundLb.text = "Round \(round)"
+                        dealerScore.text = userInfo[index]["dealerScore"]
+                        userScore.text = userInfo[index]["userScore"]
+                        
+                        dealerScoreCount = Int(dealerScore.text!)!
+                        userScoreCount = Int(userScore.text!)!
+                        roundCount = Int(round)!
+                    } else
+                    {
+                        roundLb.text = "Round \(roundCount)"
+                        dealerScore.text = String(dealerScoreCount)
+                        userScore.text = String(userScoreCount)
+                    }
+                    break
+                }
+            }
+        }
+    }
 }
 

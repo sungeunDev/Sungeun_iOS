@@ -33,11 +33,12 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         
         // 내비 타이틀
         self.navigationItem.title = "회원가입"
-        
         // 텍스트필드 리턴
         nameTf.delegate = self
         idTf.delegate = self
         pwTf.delegate = self
+        
+        pwTf.isSecureTextEntry = true
     }
     
     /// ID 중복 검사(idCheck == true : 중복 아이디 존재)를 거쳐 회원가입 진행
@@ -180,10 +181,10 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
             nextTf = pwTf
         case pwTf:
             nextTf = nil
+            pwTf.resignFirstResponder()
         default:
             print("textFieldShouldReturn Error")
         }
-        textField.resignFirstResponder()
         nextTf?.becomeFirstResponder()
         return true
     }

@@ -8,34 +8,39 @@
 
 import UIKit
 
-class LoginCompleteViewController: LoginViewController {
+class LoginCompleteViewController: UIViewController {
 
     @IBOutlet weak var welcomLb: UILabel!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        welcomLb.text =
-        """
-        환영합니다. \(idReal)님
-        로그인 되었습니다.
-        """
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "로그아웃", style: .plain, target: self, action: #selector(leftBarButtonAction(_:)))
+        
+        if let id = UserDefaults.standard.string(forKey: "userID")
+        {
+            welcomLb.text =
+            """
+            환영합니다. \(id)님
+            로그인 되었습니다.
+            """
+        }
     }
-    */
 
+    @objc private func leftBarButtonAction(_ sender: UIBarButtonItem) {
+        self.navigationController?.popViewController(animated: true)
+    }
+
+    @IBAction func gameStartAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nextVc: ViewController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        
+        self.navigationController?.pushViewController(nextVc, animated: true)
+    }
+    
+    @IBOutlet weak var coinBtnAction: UIButton!
 }

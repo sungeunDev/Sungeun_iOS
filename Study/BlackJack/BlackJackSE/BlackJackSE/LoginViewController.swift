@@ -10,21 +10,23 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var idTf: UITextField!
-    @IBOutlet weak var pwTf: UITextField!
-    var idReal: String = ""
+    @IBOutlet weak var idTf: UITextField?
+    @IBOutlet weak var pwTf: UITextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        idTf?.delegate = self
+        pwTf?.delegate = self
+        
         self.navigationItem.title = "블랙잭 게임"
+        pwTf?.isSecureTextEntry = true
     }
     
     // 로그인 버튼 클릭
     @IBAction func loginBtnAction(_ sender: Any) {
         if let id = idTf, let pw = pwTf
         {
-            idReal = id.text!
             if let userList = UserDefaults.standard.array(forKey: UserInfoKey) as? [[String:String]]
             {
                 var loginCheck = false
@@ -49,6 +51,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     })
                     loginCompleteAlert.addAction(confirmAction)
                     self.present(loginCompleteAlert, animated: true, completion: nil)
+                    
+                    // 로그인한 아이디 저장
+                    UserDefaults.standard.set(id.text, forKey: "userID")
                 } else
                 {
                     // 아이디 & 비밀번호 틀림.
@@ -80,10 +85,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.clearButtonMode = .whileEditing
-        textField.resignFirstResponder()
-        if textField == idTf
-        {
-            pwTf.becomeFirstResponder()
+        switch textField {
+        case idTf!:
+            pwTf?.becomeFirstResponder()
+        case pwTf!:
+            pwTf?.resignFirstResponder()
+        default:
+            print("textFieldShouldReturn in LoginViewController error")
         }
         return true
     }
