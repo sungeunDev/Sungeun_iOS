@@ -20,7 +20,6 @@ class LoginCompleteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "로그아웃", style: .plain, target: self, action: #selector(leftBarButtonAction(_:)))
-        
         if let id = UserDefaults.standard.string(forKey: "userID")
         {
             welcomLb.text =
@@ -31,6 +30,7 @@ class LoginCompleteViewController: UIViewController {
         }
     }
 
+    
     @objc private func leftBarButtonAction(_ sender: UIBarButtonItem) {
         self.navigationController?.popViewController(animated: true)
     }

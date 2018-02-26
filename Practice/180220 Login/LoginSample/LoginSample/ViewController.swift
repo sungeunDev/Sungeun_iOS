@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var btn: UIButton!
 
     @objc func btnAction(_ sender: UIButton) {
-        let nextVC: LoginViewController = LoginViewController()
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "Navi") as! UINavigationController
         self.present(nextVC, animated: true, completion: nil)
     }
     
@@ -22,12 +22,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         btn.addTarget(self, action: #selector(btnAction(_:)), for: .touchUpInside)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
 

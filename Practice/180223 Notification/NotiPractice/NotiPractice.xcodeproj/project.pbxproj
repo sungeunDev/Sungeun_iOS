@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FF3866E9203C067C00250122 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3866E8203C067C00250122 /* SignUpViewController.swift */; };
-		FFD41B3D203BB4380095EBBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD41B3C203BB4380095EBBF /* AppDelegate.swift */; };
-		FFD41B3F203BB4380095EBBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD41B3E203BB4380095EBBF /* ViewController.swift */; };
-		FFD41B42203BB4380095EBBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD41B40203BB4380095EBBF /* Main.storyboard */; };
-		FFD41B44203BB4380095EBBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD41B43203BB4380095EBBF /* Assets.xcassets */; };
-		FFD41B47203BB4380095EBBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD41B45203BB4380095EBBF /* LaunchScreen.storyboard */; };
-		FFD41B4F203BB4E50095EBBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD41B4E203BB4E50095EBBF /* LoginViewController.swift */; };
+		FFC480C5203FE82B00336454 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC480C4203FE82B00336454 /* AppDelegate.swift */; };
+		FFC480C7203FE82B00336454 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC480C6203FE82B00336454 /* ViewController.swift */; };
+		FFC480CA203FE82B00336454 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC480C8203FE82B00336454 /* Main.storyboard */; };
+		FFC480CC203FE82B00336454 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC480CB203FE82B00336454 /* Assets.xcassets */; };
+		FFC480CF203FE82B00336454 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC480CD203FE82B00336454 /* LaunchScreen.storyboard */; };
+		FFC480D7203FE9FF00336454 /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC480D6203FE9FF00336454 /* NextViewController.swift */; };
+		FFC480D9203FEE1D00336454 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC480D8203FEE1D00336454 /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FF3866E8203C067C00250122 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		FFD41B39203BB4380095EBBF /* LoginSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FFD41B3C203BB4380095EBBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FFD41B3E203BB4380095EBBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FFD41B41203BB4380095EBBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FFD41B43203BB4380095EBBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FFD41B46203BB4380095EBBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FFD41B48203BB4380095EBBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFD41B4E203BB4E50095EBBF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FFC480C1203FE82B00336454 /* NotiPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotiPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC480C4203FE82B00336454 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FFC480C6203FE82B00336454 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFC480C9203FE82B00336454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFC480CB203FE82B00336454 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFC480CE203FE82B00336454 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FFC480D0203FE82B00336454 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFC480D6203FE9FF00336454 /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		FFC480D8203FEE1D00336454 /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FFD41B36203BB4380095EBBF /* Frameworks */ = {
+		FFC480BE203FE82B00336454 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,74 +39,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FFD41B30203BB4380095EBBF = {
+		FFC480B8203FE82B00336454 = {
 			isa = PBXGroup;
 			children = (
-				FFD41B3B203BB4380095EBBF /* LoginSample */,
-				FFD41B3A203BB4380095EBBF /* Products */,
+				FFC480C3203FE82B00336454 /* NotiPractice */,
+				FFC480C2203FE82B00336454 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FFD41B3A203BB4380095EBBF /* Products */ = {
+		FFC480C2203FE82B00336454 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FFD41B39203BB4380095EBBF /* LoginSample.app */,
+				FFC480C1203FE82B00336454 /* NotiPractice.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FFD41B3B203BB4380095EBBF /* LoginSample */ = {
+		FFC480C3203FE82B00336454 /* NotiPractice */ = {
 			isa = PBXGroup;
 			children = (
-				FFD41B3C203BB4380095EBBF /* AppDelegate.swift */,
-				FFD41B3E203BB4380095EBBF /* ViewController.swift */,
-				FFD41B4E203BB4E50095EBBF /* LoginViewController.swift */,
-				FF3866E8203C067C00250122 /* SignUpViewController.swift */,
-				FFD41B40203BB4380095EBBF /* Main.storyboard */,
-				FFD41B43203BB4380095EBBF /* Assets.xcassets */,
-				FFD41B45203BB4380095EBBF /* LaunchScreen.storyboard */,
-				FFD41B48203BB4380095EBBF /* Info.plist */,
+				FFC480C4203FE82B00336454 /* AppDelegate.swift */,
+				FFC480C6203FE82B00336454 /* ViewController.swift */,
+				FFC480D6203FE9FF00336454 /* NextViewController.swift */,
+				FFC480C8203FE82B00336454 /* Main.storyboard */,
+				FFC480D8203FEE1D00336454 /* MyTableViewCell.swift */,
+				FFC480CB203FE82B00336454 /* Assets.xcassets */,
+				FFC480CD203FE82B00336454 /* LaunchScreen.storyboard */,
+				FFC480D0203FE82B00336454 /* Info.plist */,
 			);
-			path = LoginSample;
+			path = NotiPractice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FFD41B38203BB4380095EBBF /* LoginSample */ = {
+		FFC480C0203FE82B00336454 /* NotiPractice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FFD41B4B203BB4380095EBBF /* Build configuration list for PBXNativeTarget "LoginSample" */;
+			buildConfigurationList = FFC480D3203FE82B00336454 /* Build configuration list for PBXNativeTarget "NotiPractice" */;
 			buildPhases = (
-				FFD41B35203BB4380095EBBF /* Sources */,
-				FFD41B36203BB4380095EBBF /* Frameworks */,
-				FFD41B37203BB4380095EBBF /* Resources */,
+				FFC480BD203FE82B00336454 /* Sources */,
+				FFC480BE203FE82B00336454 /* Frameworks */,
+				FFC480BF203FE82B00336454 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = LoginSample;
-			productName = LoginSample;
-			productReference = FFD41B39203BB4380095EBBF /* LoginSample.app */;
+			name = NotiPractice;
+			productName = NotiPractice;
+			productReference = FFC480C1203FE82B00336454 /* NotiPractice.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FFD41B31203BB4380095EBBF /* Project object */ = {
+		FFC480B9203FE82B00336454 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = SE;
 				TargetAttributes = {
-					FFD41B38203BB4380095EBBF = {
+					FFC480C0203FE82B00336454 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = FFD41B34203BB4380095EBBF /* Build configuration list for PBXProject "LoginSample" */;
+			buildConfigurationList = FFC480BC203FE82B00336454 /* Build configuration list for PBXProject "NotiPractice" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,56 +114,56 @@
 				en,
 				Base,
 			);
-			mainGroup = FFD41B30203BB4380095EBBF;
-			productRefGroup = FFD41B3A203BB4380095EBBF /* Products */;
+			mainGroup = FFC480B8203FE82B00336454;
+			productRefGroup = FFC480C2203FE82B00336454 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FFD41B38203BB4380095EBBF /* LoginSample */,
+				FFC480C0203FE82B00336454 /* NotiPractice */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FFD41B37203BB4380095EBBF /* Resources */ = {
+		FFC480BF203FE82B00336454 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFD41B47203BB4380095EBBF /* LaunchScreen.storyboard in Resources */,
-				FFD41B44203BB4380095EBBF /* Assets.xcassets in Resources */,
-				FFD41B42203BB4380095EBBF /* Main.storyboard in Resources */,
+				FFC480CF203FE82B00336454 /* LaunchScreen.storyboard in Resources */,
+				FFC480CC203FE82B00336454 /* Assets.xcassets in Resources */,
+				FFC480CA203FE82B00336454 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FFD41B35203BB4380095EBBF /* Sources */ = {
+		FFC480BD203FE82B00336454 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFD41B4F203BB4E50095EBBF /* LoginViewController.swift in Sources */,
-				FFD41B3F203BB4380095EBBF /* ViewController.swift in Sources */,
-				FF3866E9203C067C00250122 /* SignUpViewController.swift in Sources */,
-				FFD41B3D203BB4380095EBBF /* AppDelegate.swift in Sources */,
+				FFC480C7203FE82B00336454 /* ViewController.swift in Sources */,
+				FFC480D9203FEE1D00336454 /* MyTableViewCell.swift in Sources */,
+				FFC480D7203FE9FF00336454 /* NextViewController.swift in Sources */,
+				FFC480C5203FE82B00336454 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FFD41B40203BB4380095EBBF /* Main.storyboard */ = {
+		FFC480C8203FE82B00336454 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FFD41B41203BB4380095EBBF /* Base */,
+				FFC480C9203FE82B00336454 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		FFD41B45203BB4380095EBBF /* LaunchScreen.storyboard */ = {
+		FFC480CD203FE82B00336454 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FFD41B46203BB4380095EBBF /* Base */,
+				FFC480CE203FE82B00336454 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -171,7 +171,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FFD41B49203BB4380095EBBF /* Debug */ = {
+		FFC480D1203FE82B00336454 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -228,7 +228,7 @@
 			};
 			name = Debug;
 		};
-		FFD41B4A203BB4380095EBBF /* Release */ = {
+		FFC480D2203FE82B00336454 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,30 +278,30 @@
 			};
 			name = Release;
 		};
-		FFD41B4C203BB4380095EBBF /* Debug */ = {
+		FFC480D4203FE82B00336454 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXH5CKM9TX;
-				INFOPLIST_FILE = LoginSample/Info.plist;
+				INFOPLIST_FILE = NotiPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.se.LoginSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.se.NotiPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		FFD41B4D203BB4380095EBBF /* Release */ = {
+		FFC480D5203FE82B00336454 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXH5CKM9TX;
-				INFOPLIST_FILE = LoginSample/Info.plist;
+				INFOPLIST_FILE = NotiPractice/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.se.LoginSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.se.NotiPractice;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -311,25 +311,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FFD41B34203BB4380095EBBF /* Build configuration list for PBXProject "LoginSample" */ = {
+		FFC480BC203FE82B00336454 /* Build configuration list for PBXProject "NotiPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FFD41B49203BB4380095EBBF /* Debug */,
-				FFD41B4A203BB4380095EBBF /* Release */,
+				FFC480D1203FE82B00336454 /* Debug */,
+				FFC480D2203FE82B00336454 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FFD41B4B203BB4380095EBBF /* Build configuration list for PBXNativeTarget "LoginSample" */ = {
+		FFC480D3203FE82B00336454 /* Build configuration list for PBXNativeTarget "NotiPractice" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FFD41B4C203BB4380095EBBF /* Debug */,
-				FFD41B4D203BB4380095EBBF /* Release */,
+				FFC480D4203FE82B00336454 /* Debug */,
+				FFC480D5203FE82B00336454 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FFD41B31203BB4380095EBBF /* Project object */;
+	rootObject = FFC480B9203FE82B00336454 /* Project object */;
 }
