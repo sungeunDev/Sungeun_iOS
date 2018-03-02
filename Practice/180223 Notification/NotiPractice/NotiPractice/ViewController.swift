@@ -64,7 +64,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             userInfo.removeAll()
             UserDefaults.standard.set(userInfo, forKey: "tfData")
             self.maintableView.reloadData()
-            print(userInfo)
         }
     }
     

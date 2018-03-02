@@ -91,6 +91,7 @@ class LoginViewController: UINavigationController, UITextFieldDelegate {
     }
     
     @objc private func touchUpInsideLoginBtn(_ sender: UIButton) {
+
         if checkInputValid() && isLogin(id: idTf.text!, pw: pwTf.text!)
         {
             let alertVC : UIAlertController = UIAlertController(title: "로그인 완료", message: "확인 버튼을 누르면 초기화면으로 돌아갑니다. 취소는 그냥 취소", preferredStyle: .alert)

@@ -14,6 +14,16 @@
 		FFD41B44203BB4380095EBBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFD41B43203BB4380095EBBF /* Assets.xcassets */; };
 		FFD41B47203BB4380095EBBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFD41B45203BB4380095EBBF /* LaunchScreen.storyboard */; };
 		FFD41B4F203BB4E50095EBBF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD41B4E203BB4E50095EBBF /* LoginViewController.swift */; };
+		FFD97C912046557A00B03C04 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD97C902046557A00B03C04 /* MainCell.swift */; };
+		FFD97C942046584000B03C04 /* FriendInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFD97C922046584000B03C04 /* FriendInfo.plist */; };
+		FFD97C952046584000B03C04 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = FFD97C932046584000B03C04 /* Settings.plist */; };
+		FFD97C9720465A0800B03C04 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD97C9620465A0800B03C04 /* DetailViewController.swift */; };
+		FFD97CC32046707000B03C04 /* MainDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD97CC22046707000B03C04 /* MainDataCenter.swift */; };
+		FFD97CC520468BCD00B03C04 /* model_ver1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD97CC420468BCD00B03C04 /* model_ver1.swift */; };
+		FFD97CC72046943A00B03C04 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD97CC62046943A00B03C04 /* SettingViewController.swift */; };
+		FFD97CC92046944D00B03C04 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD97CC82046944D00B03C04 /* SettingCell.swift */; };
+		FFD97CCF20469DDD00B03C04 /* model_ver2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD97CCE20469DDD00B03C04 /* model_ver2.swift */; };
+		FFD97CD620474C0200B03C04 /* SettingDataCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD97CD520474C0200B03C04 /* SettingDataCenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +36,16 @@
 		FFD41B46203BB4380095EBBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFD41B48203BB4380095EBBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFD41B4E203BB4E50095EBBF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FFD97C902046557A00B03C04 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		FFD97C922046584000B03C04 /* FriendInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FriendInfo.plist; sourceTree = "<group>"; };
+		FFD97C932046584000B03C04 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		FFD97C9620465A0800B03C04 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FFD97CC22046707000B03C04 /* MainDataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDataCenter.swift; sourceTree = "<group>"; };
+		FFD97CC420468BCD00B03C04 /* model_ver1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model_ver1.swift; sourceTree = "<group>"; };
+		FFD97CC62046943A00B03C04 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		FFD97CC82046944D00B03C04 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		FFD97CCE20469DDD00B03C04 /* model_ver2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model_ver2.swift; sourceTree = "<group>"; };
+		FFD97CD520474C0200B03C04 /* SettingDataCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingDataCenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +79,49 @@
 			isa = PBXGroup;
 			children = (
 				FFD41B3C203BB4380095EBBF /* AppDelegate.swift */,
-				FFD41B3E203BB4380095EBBF /* ViewController.swift */,
-				FFD41B4E203BB4E50095EBBF /* LoginViewController.swift */,
-				FF3866E8203C067C00250122 /* SignUpViewController.swift */,
 				FFD41B40203BB4380095EBBF /* Main.storyboard */,
+				FFD97C8B2046542100B03C04 /* Main */,
+				FFD97CCB2046945600B03C04 /* Settings */,
+				FFD97C8D2046544200B03C04 /* Login */,
 				FFD41B43203BB4380095EBBF /* Assets.xcassets */,
 				FFD41B45203BB4380095EBBF /* LaunchScreen.storyboard */,
 				FFD41B48203BB4380095EBBF /* Info.plist */,
+				FFD97C922046584000B03C04 /* FriendInfo.plist */,
+				FFD97C932046584000B03C04 /* Settings.plist */,
 			);
 			path = LoginSample;
+			sourceTree = "<group>";
+		};
+		FFD97C8B2046542100B03C04 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FFD41B3E203BB4380095EBBF /* ViewController.swift */,
+				FFD97CC22046707000B03C04 /* MainDataCenter.swift */,
+				FFD97C902046557A00B03C04 /* MainCell.swift */,
+				FFD97C9620465A0800B03C04 /* DetailViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FFD97C8D2046544200B03C04 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FFD41B4E203BB4E50095EBBF /* LoginViewController.swift */,
+				FF3866E8203C067C00250122 /* SignUpViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FFD97CCB2046945600B03C04 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FFD97CD520474C0200B03C04 /* SettingDataCenter.swift */,
+				FFD97CC420468BCD00B03C04 /* model_ver1.swift */,
+				FFD97CCE20469DDD00B03C04 /* model_ver2.swift */,
+				FFD97CC62046943A00B03C04 /* SettingViewController.swift */,
+				FFD97CC82046944D00B03C04 /* SettingCell.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +185,9 @@
 			files = (
 				FFD41B47203BB4380095EBBF /* LaunchScreen.storyboard in Resources */,
 				FFD41B44203BB4380095EBBF /* Assets.xcassets in Resources */,
+				FFD97C942046584000B03C04 /* FriendInfo.plist in Resources */,
 				FFD41B42203BB4380095EBBF /* Main.storyboard in Resources */,
+				FFD97C952046584000B03C04 /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,9 +198,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD97CCF20469DDD00B03C04 /* model_ver2.swift in Sources */,
 				FFD41B4F203BB4E50095EBBF /* LoginViewController.swift in Sources */,
+				FFD97C9720465A0800B03C04 /* DetailViewController.swift in Sources */,
+				FFD97C912046557A00B03C04 /* MainCell.swift in Sources */,
+				FFD97CC520468BCD00B03C04 /* model_ver1.swift in Sources */,
+				FFD97CC32046707000B03C04 /* MainDataCenter.swift in Sources */,
+				FFD97CC72046943A00B03C04 /* SettingViewController.swift in Sources */,
 				FFD41B3F203BB4380095EBBF /* ViewController.swift in Sources */,
+				FFD97CD620474C0200B03C04 /* SettingDataCenter.swift in Sources */,
 				FF3866E9203C067C00250122 /* SignUpViewController.swift in Sources */,
+				FFD97CC92046944D00B03C04 /* SettingCell.swift in Sources */,
 				FFD41B3D203BB4380095EBBF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

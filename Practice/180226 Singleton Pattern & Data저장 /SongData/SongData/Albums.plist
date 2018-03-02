@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Album - 1</key>
+	<dict>
+		<key>AlbumInfo</key>
+		<dict>
+			<key>albumTitle</key>
+			<string>2집 Oh!</string>
+			<key>artist</key>
+			<string>소녀시대</string>
+			<key>genre</key>
+			<string>댄스</string>
+		</dict>
+		<key>SongList</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Oh</string>
+				<key>trackNum</key>
+				<string>1</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>김정배</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Show! Show! Show!</string>
+				<key>trackNum</key>
+				<string>2</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>김부민</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>웃자 (Be Happy)</string>
+				<key>trackNum</key>
+				<string>3</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>이트라이브</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Album - 2</key>
+	<dict>
+		<key>AlbumInfo</key>
+		<dict>
+			<key>albumTitle</key>
+			<string>2집 Oh!</string>
+			<key>artist</key>
+			<string>소녀시대</string>
+			<key>genre</key>
+			<string>댄스</string>
+		</dict>
+		<key>SongList</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Oh</string>
+				<key>trackNum</key>
+				<string>1</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>김정배</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Show! Show! Show!</string>
+				<key>trackNum</key>
+				<string>2</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>김부민</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Album - 3</key>
+	<dict>
+		<key>AlbumInfo</key>
+		<dict>
+			<key>albumTitle</key>
+			<string>2집 Oh!</string>
+			<key>artist</key>
+			<string>소녀시대</string>
+			<key>genre</key>
+			<string>댄스</string>
+		</dict>
+		<key>SongList</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Oh</string>
+				<key>trackNum</key>
+				<string>1</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>김정배</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Show! Show! Show!</string>
+				<key>trackNum</key>
+				<string>2</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>김부민</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>웃자 (Be Happy)</string>
+				<key>trackNum</key>
+				<string>3</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>이트라이브</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>웃자 (Be Happy)</string>
+				<key>trackNum</key>
+				<string>3</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>이트라이브</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>웃자 (Be Happy)</string>
+				<key>trackNum</key>
+				<string>3</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>이트라이브</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>웃자 (Be Happy)</string>
+				<key>trackNum</key>
+				<string>3</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>이트라이브</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Album - 4</key>
+	<dict>
+		<key>AlbumInfo</key>
+		<dict>
+			<key>albumTitle</key>
+			<string>2집 Oh!</string>
+			<key>artist</key>
+			<string>소녀시대</string>
+			<key>genre</key>
+			<string>댄스</string>
+		</dict>
+		<key>SongList</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Oh</string>
+				<key>trackNum</key>
+				<string>1</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>김정배</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Show! Show! Show!</string>
+				<key>trackNum</key>
+				<string>2</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>김부민</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>웃자 (Be Happy)</string>
+				<key>trackNum</key>
+				<string>3</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>이트라이브</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>웃자 (Be Happy)</string>
+				<key>trackNum</key>
+				<string>3</string>
+				<key>artist</key>
+				<string>소녀시대</string>
+				<key>writer</key>
+				<string>이트라이브</string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>
