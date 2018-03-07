@@ -20,6 +20,9 @@ class ViewController: UIViewController {
         print(746381295[2])
         print(746381295[8])
         
+        var stack = Stack<Int>()
+        stack.push(4)
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,3 +64,14 @@ extension Int {
     }
 }
 
+
+// generic Sample
+struct Stack<T> {
+    var stackTemp: [T] = []
+    mutating func push(_ data: T) {
+        stackTemp.append(data)
+    }
+    mutating func pop() -> T {
+        return stackTemp.popLast()!
+    }
+}

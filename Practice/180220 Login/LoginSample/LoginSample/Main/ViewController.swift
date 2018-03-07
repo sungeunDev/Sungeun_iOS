@@ -72,4 +72,5 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         // 선택된거 없애는(되돌리는) 코드
         tableView.deselectRow(at: indexPath, animated: true)
     }
+
 }

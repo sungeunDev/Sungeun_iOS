@@ -24,9 +24,9 @@ import Foundation
 class SettingDataCenter {
     
     static var standard: SettingDataCenter = SettingDataCenter()
-    
     private var settingList: [[String:Any]]!
-    var settingListCount: Int {
+    
+    var settingListSectionCount: Int {
         return settingList.count
     }
     
@@ -45,12 +45,23 @@ class SettingDataCenter {
     func loadSettingList() {
         let bundlePath = Bundle.main.path(forResource: "Settings", ofType: "plist")
         guard let path = bundlePath else { return }
-        let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+        let data = try! Data(contentsOf: path.pathURL())
         let propertyList = try! PropertyListSerialization.propertyList(from: data, options: .mutableContainersAndLeaves, format: nil)
         let dic = propertyList as! [[String:Any]]
         settingList = dic
     }
 }
+
+extension String {
+    func pathURL() -> URL {
+        return URL(fileURLWithPath: self)
+    }
+}
+
+
+
+
+
 
 struct SettingDataModel {
     var sectionTitle: String
@@ -60,7 +71,8 @@ struct SettingDataModel {
         guard let title = dic["SectionTitle"] as? String else {return nil}
         self.sectionTitle = title
         
-        if let dataList = dic["Data"] as? [[String:String]] {
+        // guard let 해도 ok
+        if let dataList = dic["Data"] as? [[String:Any]] {
             for dataDic in dataList {
                 if let dataModel = DataModel(with: dataDic) {
                     self.datas.append(dataModel)
@@ -70,16 +82,28 @@ struct SettingDataModel {
     }
 }
 
+enum CellStyle: String
+{
+    case Basic = "SettingBasicCell"
+    case Detail = "SettingDetailCell"
+    case Switch = "SettingSwitchCell"
+}
+
 struct DataModel {
-    var cellStyle: String
+    var cellStyle: CellStyle
     var content : String
     
-    init?(with dic: [String:String]) {
-        guard let style = dic["CellStyle"] else {return nil}
-        guard let content = dic["Content"] else {return nil}
+    init?(with dic: [String:Any]) {
+        guard let styleStr = dic["CellStyle"] as? String else {return nil}
+        guard let style = CellStyle(rawValue: styleStr) else {return nil}
+        self.cellStyle = style
+        
+        guard let content = dic["Content"] as? String else {return nil}
         
         self.cellStyle = style
         self.content = content
     }
 }
+
+
 

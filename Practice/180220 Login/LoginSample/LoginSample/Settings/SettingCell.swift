@@ -10,8 +10,10 @@ import UIKit
 
 class SettingCell: UITableViewCell {
 
-    @IBOutlet var textLb: UILabel!
-    var headerText: String!
+    @IBOutlet weak var textLb: UILabel!
+    @IBOutlet weak var versionLb: UILabel!
+    
+    @IBOutlet var `switch` : UISwitch!
     
     override func awakeFromNib() {
         super.awakeFromNib()
