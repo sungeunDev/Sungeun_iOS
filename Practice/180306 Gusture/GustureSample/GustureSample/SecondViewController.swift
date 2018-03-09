@@ -9,7 +9,7 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    
     @IBOutlet var tf: UITextField!
     var picker: UIPickerView!
     var toolbar: UIToolbar!
@@ -27,6 +27,8 @@ class SecondViewController: UIViewController {
         toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 50))
         toolbar.setItems([doneBtn], animated: false)
         tf.inputAccessoryView = toolbar
+        
+    
         
 //        true >> frame / false >> autoLayout
 //        toolbar.translatesAutoresizingMaskIntoConstraints = false

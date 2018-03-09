@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIGestureRecognizerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+    class ViewController: UIViewController, UIGestureRecognizerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet var tf: UITextField!
     var datepick: UIDatePicker!
@@ -17,7 +17,6 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, UIPickerVie
     @IBOutlet var countLb: UILabel!
     @IBOutlet var pointLb: UILabel!
     
-    @IBOutlet var gesture: UIGestureRecognizer!
     @IBOutlet var swipeGesture: UIGestureRecognizer!
     @IBOutlet var longtapGesture: UIGestureRecognizer!
     @IBOutlet var rotationGesture: UIGestureRecognizer!
@@ -76,22 +75,27 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate, UIPickerVie
             return list2.count
         }
     }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+   
+    func pickerView(
+        _ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int
+        ) -> String? {
+        
+   
         if component == 0 {
             return list1[row]
         } else {
             return list2[row]
         }
     }
-    
+
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print(component, row)
     }
-    
     
 //     데이트 피커는 UIContol을 상속 받아서 event, selector를 통해서 무엇이 선택됐는지 알 수 있음. (value changed)
     @IBOutlet var datePicker: UIDatePicker!
    
 }
+
+
 
