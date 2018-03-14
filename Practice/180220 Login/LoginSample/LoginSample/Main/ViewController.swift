@@ -19,6 +19,9 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+    
+    print(Bundle.main.bundlePath)
+    
     }
     
     // 순서는 segue -> prepare -> didSelected
