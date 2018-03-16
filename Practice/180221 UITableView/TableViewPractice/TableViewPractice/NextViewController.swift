@@ -24,6 +24,7 @@ class NextViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        tableView.register(<#T##cellClass: AnyClass?##AnyClass?#>, forCellReuseIdentifier: <#T##String#>)
         if indexPath.row % 2 == 0
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)

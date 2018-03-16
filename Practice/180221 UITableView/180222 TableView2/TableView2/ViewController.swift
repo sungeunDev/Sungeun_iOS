@@ -34,6 +34,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
         
+        
+        
         //cell에 데이터 할당
         cell.cartegoryLb.text = cartegoryList[indexPath.row]
         cell.contentLb.text = contentList[indexPath.row]
