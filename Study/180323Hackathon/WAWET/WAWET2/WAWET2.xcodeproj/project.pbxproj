@@ -1,0 +1,428 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6F09ADCA206B91DD007C52A5 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F09ADC9206B91DD007C52A5 /* RecipeViewController.swift */; };
+		6F09ADCC206B91E0007C52A5 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F09ADCB206B91E0007C52A5 /* RecipeTableViewCell.swift */; };
+		6F853493206B48B10024CA5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F853492206B48B10024CA5A /* AppDelegate.swift */; };
+		6F853495206B48B10024CA5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F853494206B48B10024CA5A /* ViewController.swift */; };
+		6F853498206B48B10024CA5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F853496206B48B10024CA5A /* Main.storyboard */; };
+		6F85349A206B48B10024CA5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F853499206B48B10024CA5A /* Assets.xcassets */; };
+		6F85349D206B48B10024CA5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F85349B206B48B10024CA5A /* LaunchScreen.storyboard */; };
+		6F8534A5206B59AC0024CA5A /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8534A4206B59AC0024CA5A /* CategoryCollectionViewCell.swift */; };
+		6F8534A7206B5BBF0024CA5A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8534A6206B5BBF0024CA5A /* MenuViewController.swift */; };
+		6F8534A9206B5C500024CA5A /* MenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8534A8206B5C500024CA5A /* MenuCollectionViewCell.swift */; };
+		6F8534AB206B68530024CA5A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8534AA206B68530024CA5A /* Category.swift */; };
+		D9E2F30AD8BA0D9E9B670A5A /* Pods_WAWET2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0D52461B2B7214C5781E50 /* Pods_WAWET2.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		002086C8D8321E5EF4412F7F /* Pods-WAWET2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WAWET2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WAWET2/Pods-WAWET2.debug.xcconfig"; sourceTree = "<group>"; };
+		3C0D52461B2B7214C5781E50 /* Pods_WAWET2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WAWET2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F09ADC9206B91DD007C52A5 /* RecipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeViewController.swift; path = ../../WAWET/WAWET/Recipe/RecipeViewController.swift; sourceTree = "<group>"; };
+		6F09ADCB206B91E0007C52A5 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		6F85348F206B48B10024CA5A /* WAWET2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WAWET2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F853492206B48B10024CA5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6F853494206B48B10024CA5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6F853497206B48B10024CA5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F853499206B48B10024CA5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6F85349C206B48B10024CA5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6F85349E206B48B10024CA5A /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		6F8534A4206B59AC0024CA5A /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		6F8534A6206B5BBF0024CA5A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		6F8534A8206B5C500024CA5A /* MenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		6F8534AA206B68530024CA5A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		97B141FA9BD4749D969D3B54 /* Pods-WAWET2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WAWET2.release.xcconfig"; path = "Pods/Target Support Files/Pods-WAWET2/Pods-WAWET2.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6F85348C206B48B10024CA5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E2F30AD8BA0D9E9B670A5A /* Pods_WAWET2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C7FDFC851D495F24B5D253F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				002086C8D8321E5EF4412F7F /* Pods-WAWET2.debug.xcconfig */,
+				97B141FA9BD4749D969D3B54 /* Pods-WAWET2.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5E11853A5F820B59EE05BEF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C0D52461B2B7214C5781E50 /* Pods_WAWET2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F853486206B48B10024CA5A = {
+			isa = PBXGroup;
+			children = (
+				6F853491206B48B10024CA5A /* WAWET2 */,
+				6F853490206B48B10024CA5A /* Products */,
+				1C7FDFC851D495F24B5D253F /* Pods */,
+				5E11853A5F820B59EE05BEF9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6F853490206B48B10024CA5A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6F85348F206B48B10024CA5A /* WAWET2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6F853491206B48B10024CA5A /* WAWET2 */ = {
+			isa = PBXGroup;
+			children = (
+				6F853492206B48B10024CA5A /* AppDelegate.swift */,
+				6F8534AA206B68530024CA5A /* Category.swift */,
+				6F853494206B48B10024CA5A /* ViewController.swift */,
+				6F8534A4206B59AC0024CA5A /* CategoryCollectionViewCell.swift */,
+				6F8534A6206B5BBF0024CA5A /* MenuViewController.swift */,
+				6F8534A8206B5C500024CA5A /* MenuCollectionViewCell.swift */,
+				6F09ADC9206B91DD007C52A5 /* RecipeViewController.swift */,
+				6F09ADCB206B91E0007C52A5 /* RecipeTableViewCell.swift */,
+				6F853496206B48B10024CA5A /* Main.storyboard */,
+				6F853499206B48B10024CA5A /* Assets.xcassets */,
+				6F85349B206B48B10024CA5A /* LaunchScreen.storyboard */,
+				6F85349E206B48B10024CA5A /* info.plist */,
+			);
+			path = WAWET2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6F85348E206B48B10024CA5A /* WAWET2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F8534A1206B48B10024CA5A /* Build configuration list for PBXNativeTarget "WAWET2" */;
+			buildPhases = (
+				F39D0BA6815C4C48C80547E7 /* [CP] Check Pods Manifest.lock */,
+				6F85348B206B48B10024CA5A /* Sources */,
+				6F85348C206B48B10024CA5A /* Frameworks */,
+				6F85348D206B48B10024CA5A /* Resources */,
+				D5CB19C2498E285CC720E0EE /* [CP] Embed Pods Frameworks */,
+				F1FB0B6B2FC3D50F3492FF6A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WAWET2;
+			productName = WAWET2;
+			productReference = 6F85348F206B48B10024CA5A /* WAWET2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6F853487206B48B10024CA5A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = SsungNni;
+				TargetAttributes = {
+					6F85348E206B48B10024CA5A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6F85348A206B48B10024CA5A /* Build configuration list for PBXProject "WAWET2" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6F853486206B48B10024CA5A;
+			productRefGroup = 6F853490206B48B10024CA5A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6F85348E206B48B10024CA5A /* WAWET2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6F85348D206B48B10024CA5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F85349D206B48B10024CA5A /* LaunchScreen.storyboard in Resources */,
+				6F85349A206B48B10024CA5A /* Assets.xcassets in Resources */,
+				6F853498206B48B10024CA5A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D5CB19C2498E285CC720E0EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WAWET2/Pods-WAWET2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1FB0B6B2FC3D50F3492FF6A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WAWET2/Pods-WAWET2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F39D0BA6815C4C48C80547E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6F85348B206B48B10024CA5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F853495206B48B10024CA5A /* ViewController.swift in Sources */,
+				6F8534AB206B68530024CA5A /* Category.swift in Sources */,
+				6F09ADCA206B91DD007C52A5 /* RecipeViewController.swift in Sources */,
+				6F8534A5206B59AC0024CA5A /* CategoryCollectionViewCell.swift in Sources */,
+				6F853493206B48B10024CA5A /* AppDelegate.swift in Sources */,
+				6F8534A7206B5BBF0024CA5A /* MenuViewController.swift in Sources */,
+				6F8534A9206B5C500024CA5A /* MenuCollectionViewCell.swift in Sources */,
+				6F09ADCC206B91E0007C52A5 /* RecipeTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6F853496206B48B10024CA5A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F853497206B48B10024CA5A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6F85349B206B48B10024CA5A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F85349C206B48B10024CA5A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6F85349F206B48B10024CA5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6F8534A0206B48B10024CA5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6F8534A2206B48B10024CA5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 002086C8D8321E5EF4412F7F /* Pods-WAWET2.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
+				INFOPLIST_FILE = WAWET2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.se.WAWET2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6F8534A3206B48B10024CA5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97B141FA9BD4749D969D3B54 /* Pods-WAWET2.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4MM77V7NH;
+				INFOPLIST_FILE = WAWET2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.se.WAWET2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6F85348A206B48B10024CA5A /* Build configuration list for PBXProject "WAWET2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F85349F206B48B10024CA5A /* Debug */,
+				6F8534A0206B48B10024CA5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6F8534A1206B48B10024CA5A /* Build configuration list for PBXNativeTarget "WAWET2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F8534A2206B48B10024CA5A /* Debug */,
+				6F8534A3206B48B10024CA5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6F853487206B48B10024CA5A /* Project object */;
+}

@@ -14,7 +14,9 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     
     @IBOutlet var categoryImage: UIImageView!
     @IBOutlet var categoryButton: UIButton!
+    
     var delegate: CustomViewDelegete?
+    
     var item: categoryItem?{
         didSet{
             categoryButton.setTitle(item?.title, for: .normal)

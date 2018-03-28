@@ -27,6 +27,7 @@ class MainViewController: UIViewController, CustomViewDelegete
         list.append(categoryItem(title: "테마", subTitle: ["자취생", "요리초보", "글로벌"], img: "global.jpg"))
     }
  
+    
     func customViewListener(title: String, subTitle: String) {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let nextVC = storyBoard.instantiateViewController(withIdentifier: "MenuViewController") as! MenuViewController

@@ -53,7 +53,7 @@
 		6F0752A620655A7300927476 /* baby.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = baby.jpg; sourceTree = "<group>"; };
 		6F0752A720655A7300927476 /* diet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = diet.jpg; sourceTree = "<group>"; };
 		6FB626652065910C0083969C /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
-		6FB6266720659E210083969C /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		6FB6266720659E210083969C /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecipeTableViewCell.swift; path = ../../../WAWET2/WAWET2/RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		6FB6266C2065A83C0083969C /* item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = item.swift; sourceTree = "<group>"; };
 		BD28203E72F2936E7DFC2C89 /* Pods_WAWET.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WAWET.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
