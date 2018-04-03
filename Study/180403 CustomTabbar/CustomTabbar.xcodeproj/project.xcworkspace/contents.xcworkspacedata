@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FacebookStudy2.xcodeproj">
+      location = "self:CustomTabbar.xcodeproj">
    </FileRef>
 </Workspace>

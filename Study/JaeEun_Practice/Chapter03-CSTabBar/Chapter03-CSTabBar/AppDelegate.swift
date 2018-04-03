@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  FacebookStudy2
+//  Chapter03-CSTabBar
 //
-//  Created by sungnni on 2018. 4. 1..
-//  Copyright © 2018년 SsungNni. All rights reserved.
+//  Created by sungnni on 2018. 4. 3..
+//  Copyright © 2018년 OhTeam. All rights reserved.
 //
 
 import UIKit

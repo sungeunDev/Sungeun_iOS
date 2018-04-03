@@ -1,17 +1,15 @@
 //
 //  ViewController.swift
-//  FacebookStudy2
+//  Chapter03-CSTabBar
 //
-//  Created by sungnni on 2018. 4. 1..
-//  Copyright © 2018년 SsungNni. All rights reserved.
+//  Created by sungnni on 2018. 4. 3..
+//  Copyright © 2018년 OhTeam. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet private weak var login: <#className#>
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
