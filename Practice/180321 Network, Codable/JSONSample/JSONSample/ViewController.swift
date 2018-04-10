@@ -87,7 +87,7 @@ class ViewController: UIViewController {
         // https면 괜찮은데, http인 경우. info.plist 에 App Transport Security Settings - Allow Arvitary Loads : YES
         // Apple이 http는 금지한다고 했는데 아직은 유예기간 입니당
         let apiURL = URL(string: "http://api.open-notify.org/astros.json")!
-        let dataTask = URLSession.shared.dataTask(with: apiURL) { (data, response, error) in
+        let dataTask = URLSession.shared.dataTask(with: apiURL) { (data, response, error) in
             
             // 에러 처리
             guard error == nil else {

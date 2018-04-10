@@ -48,7 +48,7 @@
         <!--Item-->
         <scene sceneID="qy1-v0-Tgt">
             <objects>
-                <viewController id="p64-aJ-qMu" sceneMemberID="viewController">
+                <viewController id="p64-aJ-qMu" customClass="SecondViewController" customModule="Capter03_TabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AFO-f4-WM5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +64,7 @@
         <!--Item-->
         <scene sceneID="5r5-1I-f9D">
             <objects>
-                <viewController id="dcQ-Yg-kgQ" sceneMemberID="viewController">
+                <viewController id="dcQ-Yg-kgQ" customClass="ThirdViewController" customModule="Capter03_TabBar" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HHI-p7-NOJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
