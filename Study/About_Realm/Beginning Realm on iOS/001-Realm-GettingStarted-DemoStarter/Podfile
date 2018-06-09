@@ -1,0 +1,7 @@
+use_frameworks!
+
+target "Todoify" do
+  inhibit_all_warnings!
+
+  pod 'RealmSwift'
+end
