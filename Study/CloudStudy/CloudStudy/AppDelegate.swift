@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  CloudKitStudy
+//  CloudStudy
 //
-//  Created by sungnni on 2018. 6. 18..
+//  Created by sungnni on 2018. 6. 26..
 //  Copyright © 2018년 sungeun. All rights reserved.
 //
 

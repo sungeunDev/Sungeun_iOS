@@ -7,73 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F1B92EE20D75B1C0011BA2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B92ED20D75B1C0011BA2A /* AppDelegate.swift */; };
-		6F1B92F020D75B1C0011BA2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B92EF20D75B1C0011BA2A /* ViewController.swift */; };
-		6F1B92F320D75B1C0011BA2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F1B92F120D75B1C0011BA2A /* Main.storyboard */; };
-		6F1B92F520D75B1E0011BA2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F1B92F420D75B1E0011BA2A /* Assets.xcassets */; };
-		6F1B92F820D75B1E0011BA2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F1B92F620D75B1E0011BA2A /* LaunchScreen.storyboard */; };
-		6F1B930220D75BC60011BA2A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1B930120D75BC60011BA2A /* CloudKit.framework */; };
+		6F1B936420E1E10F0011BA2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B936320E1E10F0011BA2A /* AppDelegate.swift */; };
+		6F1B936620E1E10F0011BA2A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F1B936520E1E10F0011BA2A /* ViewController.swift */; };
+		6F1B936920E1E10F0011BA2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F1B936720E1E10F0011BA2A /* Main.storyboard */; };
+		6F1B936B20E1E1110011BA2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F1B936A20E1E1110011BA2A /* Assets.xcassets */; };
+		6F1B936E20E1E1110011BA2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F1B936C20E1E1110011BA2A /* LaunchScreen.storyboard */; };
+		6F1B937820E1E1230011BA2A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F1B937720E1E1230011BA2A /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6F1B92EA20D75B1C0011BA2A /* CloudKitStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudKitStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F1B92ED20D75B1C0011BA2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6F1B92EF20D75B1C0011BA2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6F1B92F220D75B1C0011BA2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6F1B92F420D75B1E0011BA2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6F1B92F720D75B1E0011BA2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6F1B92F920D75B1E0011BA2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6F1B92FF20D75B260011BA2A /* CloudKitStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudKitStudy.entitlements; sourceTree = "<group>"; };
-		6F1B930120D75BC60011BA2A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		6F1B936020E1E10F0011BA2A /* CloudStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CloudStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F1B936320E1E10F0011BA2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6F1B936520E1E10F0011BA2A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6F1B936820E1E10F0011BA2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F1B936A20E1E1110011BA2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6F1B936D20E1E1110011BA2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6F1B936F20E1E1110011BA2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F1B937520E1E11C0011BA2A /* CloudStudy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CloudStudy.entitlements; sourceTree = "<group>"; };
+		6F1B937720E1E1230011BA2A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6F1B92E720D75B1C0011BA2A /* Frameworks */ = {
+		6F1B935D20E1E10F0011BA2A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F1B930220D75BC60011BA2A /* CloudKit.framework in Frameworks */,
+				6F1B937820E1E1230011BA2A /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6F1B92E120D75B1B0011BA2A = {
+		6F1B935720E1E10F0011BA2A = {
 			isa = PBXGroup;
 			children = (
-				6F1B92EC20D75B1C0011BA2A /* CloudKitStudy */,
-				6F1B92EB20D75B1C0011BA2A /* Products */,
-				6F1B930020D75BC60011BA2A /* Frameworks */,
+				6F1B936220E1E10F0011BA2A /* CloudStudy */,
+				6F1B936120E1E10F0011BA2A /* Products */,
+				6F1B937620E1E1230011BA2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		6F1B92EB20D75B1C0011BA2A /* Products */ = {
+		6F1B936120E1E10F0011BA2A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6F1B92EA20D75B1C0011BA2A /* CloudKitStudy.app */,
+				6F1B936020E1E10F0011BA2A /* CloudStudy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6F1B92EC20D75B1C0011BA2A /* CloudKitStudy */ = {
+		6F1B936220E1E10F0011BA2A /* CloudStudy */ = {
 			isa = PBXGroup;
 			children = (
-				6F1B92FF20D75B260011BA2A /* CloudKitStudy.entitlements */,
-				6F1B92ED20D75B1C0011BA2A /* AppDelegate.swift */,
-				6F1B92EF20D75B1C0011BA2A /* ViewController.swift */,
-				6F1B92F120D75B1C0011BA2A /* Main.storyboard */,
-				6F1B92F420D75B1E0011BA2A /* Assets.xcassets */,
-				6F1B92F620D75B1E0011BA2A /* LaunchScreen.storyboard */,
-				6F1B92F920D75B1E0011BA2A /* Info.plist */,
+				6F1B937520E1E11C0011BA2A /* CloudStudy.entitlements */,
+				6F1B936320E1E10F0011BA2A /* AppDelegate.swift */,
+				6F1B936520E1E10F0011BA2A /* ViewController.swift */,
+				6F1B936720E1E10F0011BA2A /* Main.storyboard */,
+				6F1B936A20E1E1110011BA2A /* Assets.xcassets */,
+				6F1B936C20E1E1110011BA2A /* LaunchScreen.storyboard */,
+				6F1B936F20E1E1110011BA2A /* Info.plist */,
 			);
-			path = CloudKitStudy;
+			path = CloudStudy;
 			sourceTree = "<group>";
 		};
-		6F1B930020D75BC60011BA2A /* Frameworks */ = {
+		6F1B937620E1E1230011BA2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6F1B930120D75BC60011BA2A /* CloudKit.framework */,
+				6F1B937720E1E1230011BA2A /* CloudKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -81,34 +81,34 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6F1B92E920D75B1C0011BA2A /* CloudKitStudy */ = {
+		6F1B935F20E1E10F0011BA2A /* CloudStudy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6F1B92FC20D75B1E0011BA2A /* Build configuration list for PBXNativeTarget "CloudKitStudy" */;
+			buildConfigurationList = 6F1B937220E1E1110011BA2A /* Build configuration list for PBXNativeTarget "CloudStudy" */;
 			buildPhases = (
-				6F1B92E620D75B1C0011BA2A /* Sources */,
-				6F1B92E720D75B1C0011BA2A /* Frameworks */,
-				6F1B92E820D75B1C0011BA2A /* Resources */,
+				6F1B935C20E1E10F0011BA2A /* Sources */,
+				6F1B935D20E1E10F0011BA2A /* Frameworks */,
+				6F1B935E20E1E10F0011BA2A /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CloudKitStudy;
-			productName = CloudKitStudy;
-			productReference = 6F1B92EA20D75B1C0011BA2A /* CloudKitStudy.app */;
+			name = CloudStudy;
+			productName = CloudStudy;
+			productReference = 6F1B936020E1E10F0011BA2A /* CloudStudy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		6F1B92E220D75B1B0011BA2A /* Project object */ = {
+		6F1B935820E1E10F0011BA2A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = sungeun;
 				TargetAttributes = {
-					6F1B92E920D75B1C0011BA2A = {
+					6F1B935F20E1E10F0011BA2A = {
 						CreatedOnToolsVersion = 9.4.1;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -121,7 +121,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6F1B92E520D75B1B0011BA2A /* Build configuration list for PBXProject "CloudKitStudy" */;
+			buildConfigurationList = 6F1B935B20E1E10F0011BA2A /* Build configuration list for PBXProject "CloudStudy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -129,54 +129,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 6F1B92E120D75B1B0011BA2A;
-			productRefGroup = 6F1B92EB20D75B1C0011BA2A /* Products */;
+			mainGroup = 6F1B935720E1E10F0011BA2A;
+			productRefGroup = 6F1B936120E1E10F0011BA2A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6F1B92E920D75B1C0011BA2A /* CloudKitStudy */,
+				6F1B935F20E1E10F0011BA2A /* CloudStudy */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6F1B92E820D75B1C0011BA2A /* Resources */ = {
+		6F1B935E20E1E10F0011BA2A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F1B92F820D75B1E0011BA2A /* LaunchScreen.storyboard in Resources */,
-				6F1B92F520D75B1E0011BA2A /* Assets.xcassets in Resources */,
-				6F1B92F320D75B1C0011BA2A /* Main.storyboard in Resources */,
+				6F1B936E20E1E1110011BA2A /* LaunchScreen.storyboard in Resources */,
+				6F1B936B20E1E1110011BA2A /* Assets.xcassets in Resources */,
+				6F1B936920E1E10F0011BA2A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6F1B92E620D75B1C0011BA2A /* Sources */ = {
+		6F1B935C20E1E10F0011BA2A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F1B92F020D75B1C0011BA2A /* ViewController.swift in Sources */,
-				6F1B92EE20D75B1C0011BA2A /* AppDelegate.swift in Sources */,
+				6F1B936620E1E10F0011BA2A /* ViewController.swift in Sources */,
+				6F1B936420E1E10F0011BA2A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6F1B92F120D75B1C0011BA2A /* Main.storyboard */ = {
+		6F1B936720E1E10F0011BA2A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6F1B92F220D75B1C0011BA2A /* Base */,
+				6F1B936820E1E10F0011BA2A /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		6F1B92F620D75B1E0011BA2A /* LaunchScreen.storyboard */ = {
+		6F1B936C20E1E1110011BA2A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6F1B92F720D75B1E0011BA2A /* Base */,
+				6F1B936D20E1E1110011BA2A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		6F1B92FA20D75B1E0011BA2A /* Debug */ = {
+		6F1B937020E1E1110011BA2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,7 +244,7 @@
 			};
 			name = Debug;
 		};
-		6F1B92FB20D75B1E0011BA2A /* Release */ = {
+		6F1B937120E1E1110011BA2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -298,38 +298,38 @@
 			};
 			name = Release;
 		};
-		6F1B92FD20D75B1E0011BA2A /* Debug */ = {
+		6F1B937320E1E1110011BA2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CloudKitStudy/CloudKitStudy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CloudStudy/CloudStudy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXH5CKM9TX;
-				INFOPLIST_FILE = CloudKitStudy/Info.plist;
+				INFOPLIST_FILE = CloudStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sungeun.CloudKitStudy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sungeun.CloudStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		6F1B92FE20D75B1E0011BA2A /* Release */ = {
+		6F1B937420E1E1110011BA2A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CloudKitStudy/CloudKitStudy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CloudStudy/CloudStudy.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXH5CKM9TX;
-				INFOPLIST_FILE = CloudKitStudy/Info.plist;
+				INFOPLIST_FILE = CloudStudy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sungeun.CloudKitStudy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sungeun.CloudStudy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,25 +339,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6F1B92E520D75B1B0011BA2A /* Build configuration list for PBXProject "CloudKitStudy" */ = {
+		6F1B935B20E1E10F0011BA2A /* Build configuration list for PBXProject "CloudStudy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6F1B92FA20D75B1E0011BA2A /* Debug */,
-				6F1B92FB20D75B1E0011BA2A /* Release */,
+				6F1B937020E1E1110011BA2A /* Debug */,
+				6F1B937120E1E1110011BA2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6F1B92FC20D75B1E0011BA2A /* Build configuration list for PBXNativeTarget "CloudKitStudy" */ = {
+		6F1B937220E1E1110011BA2A /* Build configuration list for PBXNativeTarget "CloudStudy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6F1B92FD20D75B1E0011BA2A /* Debug */,
-				6F1B92FE20D75B1E0011BA2A /* Release */,
+				6F1B937320E1E1110011BA2A /* Debug */,
+				6F1B937420E1E1110011BA2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 6F1B92E220D75B1B0011BA2A /* Project object */;
+	rootObject = 6F1B935820E1E10F0011BA2A /* Project object */;
 }
