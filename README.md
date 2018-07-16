@@ -24,7 +24,6 @@
 * [180124 옵셔널](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Class/180124%20Optional/180124.md)
 * [180125 프로퍼티](https://github.com/starfg/ParkSungEun_iOS_School6/blob/master/Class/180125%20Property/180125.md)
 
-
 ## ㅁ Week 4. 기초 UI
 * [UIView]()
 * [UILabel * Button]()
@@ -33,6 +32,34 @@
 * [180205-6 Application Life Cycle & Delegate]()
     - UITextField
     - UIScrollView
+* [180208-9 UIViewController]
+* [180209 UserDefault]
+
+
+* [180221 UITableView]
+* [180222 AutoLayout]
+* [180223 Notification]
+* [180226 Plist]
+* [180227 Enumeration]
+* [180302 ARC, Subscript, Extension Generic]
+* [180312 Closer, High-Order Function]
+* [180315 Error Hnadling]
+
+## Practice List
+* [180316 MetaType, SchemeURL]
+* [180317 Firebase]
+* [180319 AutoLayout]
+* [180320 Animation, GCD]
+* [180321 Network, Codable]
+* [180326 UIDeviceEx]
+* [180327 Postman]
+* [180329 Kakao Test]
+* [180330 Algorithm]
+
+## 번외
+* [180406 MapKit]
+
+
 
 
 # Practice List
