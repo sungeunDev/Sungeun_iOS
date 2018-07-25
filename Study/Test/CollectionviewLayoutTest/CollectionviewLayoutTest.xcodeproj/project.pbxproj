@@ -3,29 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FF050C742029DEFD000D5C3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF050C732029DEFD000D5C3E /* AppDelegate.swift */; };
-		FF050C762029DEFD000D5C3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF050C752029DEFD000D5C3E /* ViewController.swift */; };
-		FF050C792029DEFD000D5C3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF050C772029DEFD000D5C3E /* Main.storyboard */; };
-		FF050C7B2029DEFD000D5C3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF050C7A2029DEFD000D5C3E /* Assets.xcassets */; };
-		FF050C7E2029DEFD000D5C3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF050C7C2029DEFD000D5C3E /* LaunchScreen.storyboard */; };
+		6FABA5EB20CF874C009DC835 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FABA5EA20CF874C009DC835 /* AppDelegate.swift */; };
+		6FABA5ED20CF874C009DC835 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FABA5EC20CF874C009DC835 /* ViewController.swift */; };
+		6FABA5F020CF874C009DC835 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FABA5EE20CF874C009DC835 /* Main.storyboard */; };
+		6FABA5F220CF874E009DC835 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FABA5F120CF874E009DC835 /* Assets.xcassets */; };
+		6FABA5F520CF874E009DC835 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FABA5F320CF874E009DC835 /* LaunchScreen.storyboard */; };
+		6FABA5FD20CF876B009DC835 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FABA5FC20CF876B009DC835 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FF050C702029DEFD000D5C3E /* TheGeniusGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheGeniusGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF050C732029DEFD000D5C3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FF050C752029DEFD000D5C3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FF050C782029DEFD000D5C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FF050C7A2029DEFD000D5C3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FF050C7D2029DEFD000D5C3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FF050C7F2029DEFD000D5C3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FABA5E720CF874C009DC835 /* CollectionviewLayoutTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionviewLayoutTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FABA5EA20CF874C009DC835 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6FABA5EC20CF874C009DC835 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6FABA5EF20CF874C009DC835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6FABA5F120CF874E009DC835 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6FABA5F420CF874E009DC835 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6FABA5F620CF874E009DC835 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6FABA5FC20CF876B009DC835 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FF050C6D2029DEFD000D5C3E /* Frameworks */ = {
+		6FABA5E420CF874C009DC835 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,127 +37,128 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FF050C672029DEFD000D5C3E = {
+		6FABA5DE20CF874C009DC835 = {
 			isa = PBXGroup;
 			children = (
-				FF050C722029DEFD000D5C3E /* TheGeniusGame */,
-				FF050C712029DEFD000D5C3E /* Products */,
+				6FABA5E920CF874C009DC835 /* CollectionviewLayoutTest */,
+				6FABA5E820CF874C009DC835 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		FF050C712029DEFD000D5C3E /* Products */ = {
+		6FABA5E820CF874C009DC835 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF050C702029DEFD000D5C3E /* TheGeniusGame.app */,
+				6FABA5E720CF874C009DC835 /* CollectionviewLayoutTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FF050C722029DEFD000D5C3E /* TheGeniusGame */ = {
+		6FABA5E920CF874C009DC835 /* CollectionviewLayoutTest */ = {
 			isa = PBXGroup;
 			children = (
-				FF050C732029DEFD000D5C3E /* AppDelegate.swift */,
-				FF050C752029DEFD000D5C3E /* ViewController.swift */,
-				FF050C772029DEFD000D5C3E /* Main.storyboard */,
-				FF050C7A2029DEFD000D5C3E /* Assets.xcassets */,
-				FF050C7C2029DEFD000D5C3E /* LaunchScreen.storyboard */,
-				FF050C7F2029DEFD000D5C3E /* Info.plist */,
+				6FABA5EA20CF874C009DC835 /* AppDelegate.swift */,
+				6FABA5EC20CF874C009DC835 /* ViewController.swift */,
+				6FABA5FC20CF876B009DC835 /* TestViewController.swift */,
+				6FABA5EE20CF874C009DC835 /* Main.storyboard */,
+				6FABA5F120CF874E009DC835 /* Assets.xcassets */,
+				6FABA5F320CF874E009DC835 /* LaunchScreen.storyboard */,
+				6FABA5F620CF874E009DC835 /* Info.plist */,
 			);
-			path = TheGeniusGame;
+			path = CollectionviewLayoutTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FF050C6F2029DEFD000D5C3E /* TheGeniusGame */ = {
+		6FABA5E620CF874C009DC835 /* CollectionviewLayoutTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF050C822029DEFD000D5C3E /* Build configuration list for PBXNativeTarget "TheGeniusGame" */;
+			buildConfigurationList = 6FABA5F920CF874E009DC835 /* Build configuration list for PBXNativeTarget "CollectionviewLayoutTest" */;
 			buildPhases = (
-				FF050C6C2029DEFD000D5C3E /* Sources */,
-				FF050C6D2029DEFD000D5C3E /* Frameworks */,
-				FF050C6E2029DEFD000D5C3E /* Resources */,
+				6FABA5E320CF874C009DC835 /* Sources */,
+				6FABA5E420CF874C009DC835 /* Frameworks */,
+				6FABA5E520CF874C009DC835 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TheGeniusGame;
-			productName = TheGeniusGame;
-			productReference = FF050C702029DEFD000D5C3E /* TheGeniusGame.app */;
+			name = CollectionviewLayoutTest;
+			productName = CollectionviewLayoutTest;
+			productReference = 6FABA5E720CF874C009DC835 /* CollectionviewLayoutTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FF050C682029DEFD000D5C3E /* Project object */ = {
+		6FABA5DF20CF874C009DC835 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = SE;
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = sungeun;
 				TargetAttributes = {
-					FF050C6F2029DEFD000D5C3E = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
+					6FABA5E620CF874C009DC835 = {
+						CreatedOnToolsVersion = 9.4;
 					};
 				};
 			};
-			buildConfigurationList = FF050C6B2029DEFD000D5C3E /* Build configuration list for PBXProject "TheGeniusGame" */;
-			compatibilityVersion = "Xcode 8.0";
+			buildConfigurationList = 6FABA5E220CF874C009DC835 /* Build configuration list for PBXProject "CollectionviewLayoutTest" */;
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = FF050C672029DEFD000D5C3E;
-			productRefGroup = FF050C712029DEFD000D5C3E /* Products */;
+			mainGroup = 6FABA5DE20CF874C009DC835;
+			productRefGroup = 6FABA5E820CF874C009DC835 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FF050C6F2029DEFD000D5C3E /* TheGeniusGame */,
+				6FABA5E620CF874C009DC835 /* CollectionviewLayoutTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FF050C6E2029DEFD000D5C3E /* Resources */ = {
+		6FABA5E520CF874C009DC835 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF050C7E2029DEFD000D5C3E /* LaunchScreen.storyboard in Resources */,
-				FF050C7B2029DEFD000D5C3E /* Assets.xcassets in Resources */,
-				FF050C792029DEFD000D5C3E /* Main.storyboard in Resources */,
+				6FABA5F520CF874E009DC835 /* LaunchScreen.storyboard in Resources */,
+				6FABA5F220CF874E009DC835 /* Assets.xcassets in Resources */,
+				6FABA5F020CF874C009DC835 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FF050C6C2029DEFD000D5C3E /* Sources */ = {
+		6FABA5E320CF874C009DC835 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF050C762029DEFD000D5C3E /* ViewController.swift in Sources */,
-				FF050C742029DEFD000D5C3E /* AppDelegate.swift in Sources */,
+				6FABA5ED20CF874C009DC835 /* ViewController.swift in Sources */,
+				6FABA5FD20CF876B009DC835 /* TestViewController.swift in Sources */,
+				6FABA5EB20CF874C009DC835 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FF050C772029DEFD000D5C3E /* Main.storyboard */ = {
+		6FABA5EE20CF874C009DC835 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FF050C782029DEFD000D5C3E /* Base */,
+				6FABA5EF20CF874C009DC835 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		FF050C7C2029DEFD000D5C3E /* LaunchScreen.storyboard */ = {
+		6FABA5F320CF874E009DC835 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FF050C7D2029DEFD000D5C3E /* Base */,
+				6FABA5F420CF874E009DC835 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -163,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		FF050C802029DEFD000D5C3E /* Debug */ = {
+		6FABA5F720CF874E009DC835 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -173,10 +176,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -184,6 +189,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -211,7 +217,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -220,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		FF050C812029DEFD000D5C3E /* Release */ = {
+		6FABA5F820CF874E009DC835 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,10 +236,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -241,6 +249,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -262,38 +271,45 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		FF050C832029DEFD000D5C3E /* Debug */ = {
+		6FABA5FA20CF874E009DC835 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXH5CKM9TX;
-				INFOPLIST_FILE = TheGeniusGame/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.se.TheGeniusGame;
+				INFOPLIST_FILE = CollectionviewLayoutTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sungeun.CollectionviewLayoutTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		FF050C842029DEFD000D5C3E /* Release */ = {
+		6FABA5FB20CF874E009DC835 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WXH5CKM9TX;
-				INFOPLIST_FILE = TheGeniusGame/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.se.TheGeniusGame;
+				INFOPLIST_FILE = CollectionviewLayoutTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sungeun.CollectionviewLayoutTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -303,25 +319,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FF050C6B2029DEFD000D5C3E /* Build configuration list for PBXProject "TheGeniusGame" */ = {
+		6FABA5E220CF874C009DC835 /* Build configuration list for PBXProject "CollectionviewLayoutTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF050C802029DEFD000D5C3E /* Debug */,
-				FF050C812029DEFD000D5C3E /* Release */,
+				6FABA5F720CF874E009DC835 /* Debug */,
+				6FABA5F820CF874E009DC835 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF050C822029DEFD000D5C3E /* Build configuration list for PBXNativeTarget "TheGeniusGame" */ = {
+		6FABA5F920CF874E009DC835 /* Build configuration list for PBXNativeTarget "CollectionviewLayoutTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF050C832029DEFD000D5C3E /* Debug */,
-				FF050C842029DEFD000D5C3E /* Release */,
+				6FABA5FA20CF874E009DC835 /* Debug */,
+				6FABA5FB20CF874E009DC835 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FF050C682029DEFD000D5C3E /* Project object */;
+	rootObject = 6FABA5DF20CF874C009DC835 /* Project object */;
 }
