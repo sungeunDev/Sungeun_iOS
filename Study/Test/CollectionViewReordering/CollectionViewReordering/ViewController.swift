@@ -30,17 +30,17 @@ class ViewController: UIViewController {
 
   @IBAction func longGesture(_ sender: UILongPressGestureRecognizer) {
     let location = sender.location(in: collectionview) // location은 CGPoint로 좌표를 나타냄.
-    print(location)
+//    print(location)
     switch sender.state { // 제스쳐의 상태에 따라
     case .began:
-      print("\n---------- [ began ] -----------\n")
+//      print("\n---------- [ began ] -----------\n")
       guard let itemIndexPath = collectionview.indexPathForItem(at: location) else { break } // 위치에 따라 콜렉션뷰의 indexPath 찾기
       collectionview.beginInteractiveMovementForItem(at: itemIndexPath) // 해당 indexPath가 움직이기 시작
     case .changed:
       // 움직임에 따라 location 좌표 실시간으로 변경됨. 그 좌표에 따라 타겟 위치(셀) 위치 업데이트
       collectionview.updateInteractiveMovementTargetPosition(location)
       // 이부분만 새로 만들어주면 될 것 같긴 한데.
-      print("change")
+//      print("change")
     case .ended:
       collectionview.endInteractiveMovement() // 움직임 종료
     case .cancelled:
