@@ -11,7 +11,12 @@ import UIKit
 class ViewController: UIViewController {
 
   @IBOutlet weak var collectionview: UICollectionView!
-  var arr = Array(1...50)
+  var arr = Array(1...21)
+//  {
+//    willSet {
+//      print(arr, newValue)
+//    }
+//  }
   
   @IBOutlet weak var image: UIImageView!
   
@@ -65,13 +70,18 @@ extension ViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDa
   
   
   // DataSource -> source - destination을 어디로 보낼지에 대한 것.
-  func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-    guard sourceIndexPath != destinationIndexPath else { return } // source 와 destination 이 다를 경우,
-    
-    let item = self.arr[sourceIndexPath.item]
-    self.arr.remove(at: sourceIndexPath.item)
-    self.arr.insert(item, at: destinationIndexPath.item)
-  }
+//  func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+//    print("\n---------- [ moveItemAt - to ] -----------\n")
+//    guard sourceIndexPath != destinationIndexPath else { return } // source 와 destination 이 다를 경우,
+//    print(arr)
+//    let item = self.arr[sourceIndexPath.item]
+//    self.arr.remove(at: sourceIndexPath.item)
+//    self.arr.insert(item, at: destinationIndexPath.item)
+//    print(arr)
+//  }
+  // 이거 왜필요?
+  
+  
   
   // delegate
   // updateInteractiveMovementTargetPosition (_ :) 시, 아래 메서드 호출

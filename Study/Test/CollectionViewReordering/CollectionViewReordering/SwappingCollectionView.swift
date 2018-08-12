@@ -25,11 +25,14 @@ class SwappingCollectionView: UICollectionView {
   
   
   override func beginInteractiveMovementForItem(at indexPath: IndexPath) -> Bool {
-    self.originIndexPath = indexPath
-    indexArr.append(originIndexPath!)
+//    self.originIndexPath = indexPath
+//    indexArr.append(originIndexPath!)
     
+//    print("\n---------- [ beginInteractiveMovementForItem ] -----------\n")
     self.indexPath = indexPath
     self.cell = self.cellForItem(at: indexPath)
+    
+//    print("indexPath: ", indexPath)
 
     self.snapView = UIImageView(image: self.cell?.snapshot())
     self.snapView?.frame = self.cell!.frame
@@ -47,17 +50,18 @@ class SwappingCollectionView: UICollectionView {
   }
   
   override func updateInteractiveMovementTargetPosition(_ targetPosition: CGPoint) {
-    print("\n---------- [ updateInteractiveMovementTargetPosition ] -----------\n")
+//    print("\n---------- [ updateInteractiveMovementTargetPosition ] -----------\n")
     // swap 하는 경우. 즉, 타겟 포지션과 시작 포지션이 일치하지 않을 때.
-    if (self.shouldSwap(newPoint: targetPosition)) {
-      
+    if (self.shouldSwap(newPoint: targetPosition)) { // 일정 거리 떨어져 있을 경우에만 움직임!!! 필요한 함수!
+//      print("previous point: ", previousPoint)
+//      print("targetPosition: ", targetPosition)
       if let hoverIndexPath = self.indexPathForItem(at: targetPosition),
         let interactiveIndexPath = self.indexPath {
-      
-        indexArr.append(hoverIndexPath) // - 2번째 indexPath
+//      print("indexPath", hoverIndexPath, interactiveIndexPath)
+//        indexArr.append(hoverIndexPath) // - 2번째 indexPath
         
-        if indexArr.count == 2 {
-          print("\n---------- [ 첫번째 이동일때 ] -----------\n")
+//        if indexArr.count == 2 {
+//          print("\n---------- [ 첫번째 이동일때 ] -----------\n")
           let swapDescription = SwapDescription(firstItem: interactiveIndexPath.item, secondItem: hoverIndexPath.item)
           
           if !(swapSet.contains(swapDescription)) {
@@ -71,32 +75,31 @@ class SwappingCollectionView: UICollectionView {
               self.indexPath = hoverIndexPath
             }
           }
-        } else {
-          print("\n---------- [ 두번째 이상 이동일 때 ] -----------\n")
-          
-          let origin = indexArr[0]
-          let second = indexArr[1]
-          let third = indexArr[2]
-          
-          let swapDescription = SwapDescription(firstItem: origin.item, secondItem: third.item)
-          
-          if !(swapSet.contains(swapDescription)) {
-            self.swapSet.insert(swapDescription)
-            
-            self.performBatchUpdates({
-              self.moveItem(at: interactiveIndexPath, to: third)
-              self.moveItem(at: hoverIndexPath, to: second)
-              self.moveItem(at: third, to: origin)
-            }) { (finished) in
-              self.swapSet.remove(swapDescription)
-              self.indexPath = third
-              self.indexArr.remove(at: 1)
-            }
-          }
         }
-        
-
-      }
+//      else {
+//          print("\n---------- [ 두번째 이상 이동일 때 ] -----------\n")
+//
+//          let origin = indexArr[0]
+//          let second = indexArr[1]
+//          let third = indexArr[2]
+//
+//          let swapDescription = SwapDescription(firstItem: origin.item, secondItem: third.item)
+//
+//          if !(swapSet.contains(swapDescription)) {
+//            self.swapSet.insert(swapDescription)
+//
+//            self.performBatchUpdates({
+//              self.moveItem(at: interactiveIndexPath, to: third)
+//              self.moveItem(at: hoverIndexPath, to: second)
+//              self.moveItem(at: third, to: origin)
+//            }) { (finished) in
+//              self.swapSet.remove(swapDescription)
+//              self.indexPath = third
+//              self.indexArr.remove(at: 1)
+//            }
+//          }
+//        }
+//      }
     }
     
     // 스냅뷰의 위치 선정. & 현재 타겟 포지션이 이전 포지션이 됨.
