@@ -6,4 +6,12 @@
 //  Copyright © 2018년 sungeun. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MemoData {
+  var memoIdx: Int?
+  var title: String?
+  var contents: String?
+  var image: UIImage?
+  var regDate: Date?
+}
