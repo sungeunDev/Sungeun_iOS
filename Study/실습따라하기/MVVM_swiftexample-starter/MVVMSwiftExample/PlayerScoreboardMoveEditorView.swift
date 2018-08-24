@@ -83,8 +83,6 @@ class PlayerScoreboardMoveEditorView: UIView {
         styleActionButton(assistButton)
         styleActionButton(reboundButton)
         styleActionButton(foulButton)
-      
-      print("commit test")
     }
     
     fileprivate func styleActionButton(_ button: UIButton) {
