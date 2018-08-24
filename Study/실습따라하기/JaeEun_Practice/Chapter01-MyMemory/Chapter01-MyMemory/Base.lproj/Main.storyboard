@@ -18,7 +18,7 @@
         <scene sceneID="dIG-Sv-d3N">
             <objects>
                 <tableViewController id="A4o-yW-Beb" customClass="MemoListVC" customModule="Chapter01_MyMemory" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="voB-ov-bzT">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="voB-ov-bzT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,6 +75,11 @@
                                         <constraint firstItem="Nwd-L0-bsg" firstAttribute="top" secondItem="6z9-2U-Nwe" secondAttribute="bottom" constant="5" id="xDz-HK-0P2"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="Nwd-L0-bsg" id="J3u-10-AGZ"/>
+                                    <outlet property="regDate" destination="5aZ-5J-kgx" id="Hmt-pT-YJO"/>
+                                    <outlet property="subject" destination="6z9-2U-Nwe" id="9Cd-P7-Bw0"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memoCellWithImage" rowHeight="80" id="RPJ-1S-ReW" customClass="MemoCell" customModule="Chapter01_MyMemory" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="108" width="375" height="80"/>
@@ -132,6 +137,12 @@
                                         <constraint firstItem="iHw-Td-vC0" firstAttribute="top" secondItem="Nxz-Qs-Uku" secondAttribute="top" constant="10" id="zgG-L0-SXG"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="contents" destination="6xS-3C-ONh" id="ytO-KR-lmv"/>
+                                    <outlet property="img" destination="vlt-Oh-CIM" id="F0u-OO-ccO"/>
+                                    <outlet property="regDate" destination="iHw-Td-vC0" id="b3c-FH-Uim"/>
+                                    <outlet property="subject" destination="xMq-yy-ZNI" id="v3q-Pk-W0n"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -215,7 +226,7 @@
         <!--상세 화면-->
         <scene sceneID="Toa-Fz-Ubu">
             <objects>
-                <viewController title="상세 화면" id="7Af-fn-dSC" userLabel="상세 화면" customClass="MemoReadVC" customModule="Chapter01_MyMemory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoRead" title="상세 화면" id="7Af-fn-dSC" userLabel="상세 화면" customClass="MemoReadVC" customModule="Chapter01_MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K5S-Z7-nD8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,6 +268,11 @@
                         <viewLayoutGuide key="safeArea" id="2h6-gj-PKq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="QVt-0N-dHH"/>
+                    <connections>
+                        <outlet property="contents" destination="9qD-nE-vSj" id="FoZ-eP-rPX"/>
+                        <outlet property="img" destination="00n-q5-9fo" id="jHr-hZ-6gD"/>
+                        <outlet property="subject" destination="0BK-Cl-mPQ" id="fZI-Qm-bqc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="au6-uw-x0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

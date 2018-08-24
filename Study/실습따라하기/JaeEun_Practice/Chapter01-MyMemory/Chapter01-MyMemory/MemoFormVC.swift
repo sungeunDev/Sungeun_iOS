@@ -42,12 +42,28 @@ class MemoFormVC: UIViewController {
   }
   
   @IBAction private func pick() {
-    let picker = UIImagePickerController()
     
-    picker.delegate = self
-    picker.allowsEditing = true
-    
-    self.present(picker, animated: false, completion: nil)
+    let alert = UIAlertController(title: "이미지를 가져올 곳을 선택해 주세요.", message: "", preferredStyle: .actionSheet)
+    let cameraAction = UIAlertAction(title: "카메라", style: .default) { (action) in
+      let picker = UIImagePickerController()
+      
+      if UIImagePickerController.isSourceTypeAvailable(.camera) {
+        picker.sourceType = .camera
+        picker.delegate = self
+        self.present(picker, animated: false, completion: nil)
+      } else {
+        print("Camera not available")
+      }
+    }
+    let library = UIAlertAction(title: "앨범", style: .default) { (action) in
+      let picker = UIImagePickerController()
+      picker.delegate = self
+      picker.allowsEditing = true
+      self.present(picker, animated: false, completion: nil)
+    }
+    alert.addAction(cameraAction)
+    alert.addAction(library)
+    self.present(alert, animated: false, completion: nil)
   }
 }
 
