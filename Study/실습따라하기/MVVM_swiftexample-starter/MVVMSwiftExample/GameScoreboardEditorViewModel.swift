@@ -18,4 +18,10 @@ protocol GameScoreboardEditorViewModel {
   
   var isPaused: Bool { get }
   func togglePause()
+  
+  
+  // 확장
+  // GameScoreBoardEditorVC는 PlayerScoreboardMoveEditorView의 부모 뷰이기 때문에 PlayerScoreboardMoveEditerViewModel 객체를 생성해야 함.
+  var homePlayer: [PlayerScoreboardMoveEditorViewModel] { get }
+  var awayPlayer: [PlayerScoreboardMoveEditorViewModel] { get }
 }

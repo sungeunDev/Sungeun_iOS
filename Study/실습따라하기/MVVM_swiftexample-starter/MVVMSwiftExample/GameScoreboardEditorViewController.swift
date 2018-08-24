@@ -67,6 +67,14 @@ class GameScoreboardEditorViewController: UIViewController {
     
     let title: String = viewModel.isPaused ? "Start" : "Pause"
     self.pauseButton.setTitle(title, for: .normal)
+    
+    homePlayer1View.viewModel = viewModel.homePlayer[0]
+    homePlayer2View.viewModel = viewModel.homePlayer[1]
+    homePlayer3View.viewModel = viewModel.homePlayer[2]
+    
+    awayPlayer1View.viewModel = viewModel.awayPlayer[0]
+    awayPlayer2View.viewModel = viewModel.awayPlayer[1]
+    awayPlayer3View.viewModel = viewModel.awayPlayer[2]
   }
   
 }

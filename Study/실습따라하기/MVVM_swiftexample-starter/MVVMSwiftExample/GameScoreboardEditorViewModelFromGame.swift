@@ -8,7 +8,20 @@
 
 import Foundation
 
-class GameScoreboardEditorViewModelFromGame: NSObject, GameScoreboardEditorViewModel { // NSObject의 서브클래스이고, Protocol을 준수함
+class GameScoreboardEditorViewModelFromGame: NSObject, GameScoreboardEditorViewModel {
+  /***************************************************
+   < NSObject >
+   The root class of most Objective-C class hierarchies,
+   from which subclasses inherit a basic interface to the runtime system and the ability to behave as Objective-C objects.
+   
+   < NSObject 의 생명주기 >
+   - iOS의 모든 객체는 NSObject에 정의된대로 생명주기를 갖습니다.
+   - 기본적으로는 메모리에 생성될 때 alloc, 메모리에서 해제될 때 dealloc 메소드를 시스템에서 호출합니다.
+   - alloc 과 dealloc 메소드를 재정의 한다면 언제 메모시레 생성되고 해제되었는지 알 수 있으며, 적절한 처리도 해 줄 수 있습니다.
+   출처: http://adervise1.tistory.com/16 [하늘의 가치]
+   ***************************************************/
+  
+  // NSObject의 서브클래스이고, Protocol을 준수함
   // Game 모델에서 데이터를 가져오는 ViewModel을 프로토콜로 만들고,
   // 프로토콜에 대한 구현을 생성
   // 프로토콜로 만들면, 사용할 데이터를 정의해주기만 하면 되기 때문에 명확하게 만들 수 있음.
@@ -42,6 +55,9 @@ class GameScoreboardEditorViewModelFromGame: NSObject, GameScoreboardEditorViewM
     self.isPaused = !isPaused
   }
   
+  var homePlayer: [PlayerScoreboardMoveEditorViewModel]
+  var awayPlayer: [PlayerScoreboardMoveEditorViewModel]
+  
   // MARK:  Init
   
   init(withGame game: Game) {
@@ -54,6 +70,9 @@ class GameScoreboardEditorViewModelFromGame: NSObject, GameScoreboardEditorViewM
     self.score = GameScoreboardEditorViewModelFromGame.scorePretty(for: game)
     self.isFinished = game.isFinished
     self.isPaused = true
+    
+    self.homePlayer = GameScoreboardEditorViewModelFromGame.playerViewModels(from: game.homeTeam.players, game: game)
+    self.awayPlayer = GameScoreboardEditorViewModelFromGame.playerViewModels(from: game.awayTeam.players, game: game)
   }
   
   // MARK:  Private
@@ -113,5 +132,14 @@ class GameScoreboardEditorViewModelFromGame: NSObject, GameScoreboardEditorViewM
 //    print("\(game.homeTeamScore) - \(game.awayTeamScore)")
     
     return String(format: "\(game.homeTeamScore) - \(game.awayTeamScore)")
+  }
+  
+  // MARK: Private Init
+  fileprivate static func playerViewModels(from players: [Player], game: Game) -> [PlayerScoreboardMoveEditorViewModel] {
+    var playerViewModels: [PlayerScoreboardMoveEditorViewModel] = [PlayerScoreboardMoveEditorViewModel]()
+    for player in players {
+      playerViewModels.append(PlayerScoreboardMoveEditorViewModelFromPlayer(withGame: game, player: player))
+    }
+    return playerViewModels
   }
 }
