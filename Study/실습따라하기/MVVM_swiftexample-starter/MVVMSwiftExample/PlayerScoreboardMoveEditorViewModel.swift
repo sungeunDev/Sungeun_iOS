@@ -12,11 +12,11 @@ protocol PlayerScoreboardMoveEditorViewModel {
   
   var playerName: String { get }
   
-  var onePointMoveCount: String { get }
-  var twoPointMoveCount: String { get }
-  var assistMoveCount: String { get }
-  var reboundMoveCount: String { get }
-  var foulMoveCount: String { get }
+  var onePointMoveCount: Dynamic<String> { get }
+  var twoPointMoveCount: Dynamic<String> { get }
+  var assistMoveCount: Dynamic<String> { get }
+  var reboundMoveCount: Dynamic<String> { get }
+  var foulMoveCount: Dynamic<String> { get }
   
   func onePointMove()
   func twoPointMove()
