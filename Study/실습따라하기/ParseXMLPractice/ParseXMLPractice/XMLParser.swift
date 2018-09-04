@@ -7,12 +7,61 @@
 //
 
 import Foundation
+import SWXMLHash
 
-struct RSSItem {
+struct RSSItem: XMLIndexerDeserializable {
     var title: String
     var description: String
     var pubDate: String
 }
+
+class FeedParserWithSWXMHash {
+    private var rssItems: [RSSItem] = []
+    private var currentElement: XMLIndexer?
+    private var currentTitle: String = ""
+    private var currentDescription: String = ""
+    private var currentPubDate: String = ""
+    
+    private var parserCompletionHandler: (([RSSItem]) -> Void)?
+    
+    let xlmSample = """
+    <item>
+    <title>Privacy Policy Reminder</title>
+    <link>https://developer.apple.com/news/?id=08312018a</link>
+    <guid>https://developer.apple.com/news/?id=08312018a</guid>
+    <description>As a reminder, in June the App Store Review Guidelines were updated to require a privacy policy for all new apps and app updates as part of the app review process. Starting October 3, 2018, App Store Connect will require a privacy policy for all new apps and app updates before they can be submitted for distribution on the App Store or through TestFlight external testing. In addition, your app’s privacy policy link or text will only be editable when you submit a new version of your app. Learn more about privacy policy guidelines</description>
+    <pubDate>Fri, 31 Aug 2018 13:30:00 PDT</pubDate>
+    <content:encoded><![CDATA[<p>As a reminder, in June the App Store Review Guidelines were updated to require a privacy policy for all new apps and app updates as part of the app review process. Starting October 3, 2018, App Store Connect will require a privacy policy for all new apps and app updates before they can be submitted for distribution on the App Store or through TestFlight external testing. In addition, your app’s privacy policy link or text will only be editable when you submit a new version of your app. </p><p><span class="nowrap"><a class="icon icon-after icon-chevronright" href="https://developer.apple.com/app-store/review/guidelines/#privacy">Learn more about privacy policy guidelines</a></span></p>]]></content:encoded>
+    </item>
+"""
+    
+    func parserFeed(url: String, completionHandler: (([RSSItem]) -> Void)?) {
+        let task = URLSession.shared.dataTask(with: URL(string: url)!) { (data, response, error) in
+//            guard let data = data else { return }
+            let xml = SWXMLHash.parse(self.xlmSample)
+            self.currentElement = xml["item"]["title"]
+//            self.deserialize(self.currentElement)
+            print(self.currentElement?.element?.text)
+        }
+        task.resume()
+    }
+    
+    private func deserialize(_ node: XMLIndexer?) {
+        guard let node = node else { return }
+        currentTitle = (node["title"].element?.text)!
+        currentDescription = (node["description"].element?.text)!
+        currentPubDate = (node["pubDate"].element?.text)!
+        
+        print(currentTitle)
+
+        let rssItem = RSSItem(title: currentTitle, description: currentDescription, pubDate: currentPubDate)
+        self.rssItems.append(rssItem)
+        print(rssItem)
+    }
+    
+    
+}
+
 
 // download xml from server
 // parse xml to foundation objects
