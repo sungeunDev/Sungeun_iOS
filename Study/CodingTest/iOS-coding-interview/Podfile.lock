@@ -1,0 +1,22 @@
+PODS:
+  - KRIndicatorController (1.0.0.3)
+
+DEPENDENCIES:
+  - KRIndicatorController (from `https://github.com/funct7/KRIndicatorController.git`, branch `develop`)
+
+EXTERNAL SOURCES:
+  KRIndicatorController:
+    :branch: develop
+    :git: https://github.com/funct7/KRIndicatorController.git
+
+CHECKOUT OPTIONS:
+  KRIndicatorController:
+    :commit: b77f1c92ab979c25829649861936bf3ecbb577f7
+    :git: https://github.com/funct7/KRIndicatorController.git
+
+SPEC CHECKSUMS:
+  KRIndicatorController: e2c10142801db8b6b7987397454711a26a53b84c
+
+PODFILE CHECKSUM: 923794ff5a75f7c6780c53b6dfc8c90cc9e0c6f9
+
+COCOAPODS: 1.5.0.beta.1

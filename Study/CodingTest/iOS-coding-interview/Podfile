@@ -1,0 +1,30 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Anchorage' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'KRIndicatorController', :git=>'https://github.com/funct7/KRIndicatorController.git', :branch=>'develop'
+
+  # Pods for Anchorage
+
+  target 'AnchorageUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
+
+target 'ProblemKit' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ProblemKit
+
+  target 'ProblemKitTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
