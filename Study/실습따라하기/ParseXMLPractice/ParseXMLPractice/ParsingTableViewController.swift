@@ -23,9 +23,10 @@ class ParsingTableViewController: UITableViewController {
     }
     
     private func fetchData() {
-        let feedParser: FeedParser = FeedParser()
+        let feedParser = FeedParserWithSWXMHash()
         feedParser.parserFeed(url: "https://developer.apple.com/news/rss/news.rss") {
          (rssItems) in
+            print("\n---------- [ parserFeed - fetchData ] -----------\n")
             self.rssItems = rssItems
             self.cellStates = Array(repeating: .collapsed, count: rssItems.count)
             
