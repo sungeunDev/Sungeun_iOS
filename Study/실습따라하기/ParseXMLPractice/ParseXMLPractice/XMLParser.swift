@@ -64,7 +64,7 @@ class FeedParserWithSWXMHash {
 
 
 // download xml from server
-// parse xml to foundation objects
+// parse xml to foundation objectsb
 // call back
 
 class FeedParser: NSObject, XMLParserDelegate {
