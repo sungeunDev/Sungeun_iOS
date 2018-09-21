@@ -1,0 +1,9 @@
+{
+    "name":"얼평선생",
+    "birthday":"1987-06-22",
+    "height":187,
+    "job":"얼평가",
+    "location":"126.9683104,37.344701",
+    "hobbys":["독서", "영화", "축구"],
+    "is_fulfilled":false
+}

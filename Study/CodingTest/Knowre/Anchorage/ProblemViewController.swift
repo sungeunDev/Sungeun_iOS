@@ -23,7 +23,14 @@ class ProblemViewController: UIViewController {
     var problems: [Problem]?
     var selectedProblemIndex: Int = 0
     var problem: Problem?
-    var problemData: ProblemData?
+    var problemData: ProblemData? {
+        didSet {
+            DispatchQueue.main.async {
+                self.configuration()
+                self.endOperation()
+            }
+        }
+    }
     
     var solvedResult: [(Int, Bool)] = []
     
@@ -41,11 +48,10 @@ class ProblemViewController: UIViewController {
         beginOperation()
         self.problem = self.problems?[index]
         guard let id = problem?.id else { return }
-        DispatchQueue.main.async {
+        
+        DispatchQueue.global().async {
             ProblemLoader.fetchProblem(id: id) { problemData in
                 self.problemData = problemData
-                self.configuration()
-                self.endOperation()
             }
         }
     }
@@ -121,15 +127,17 @@ extension ProblemViewController: ProblemViewDelegate {
             guard let id = problem?.id else { return }
             self.beginOperation()
             
-            ProblemLoader.checkAnswer(didSubmitAnswer, id: id) { (bool) in
-                guard let bool = bool else { return }
-                problemView.displayResult(bool)
-                self.nextPanelAnimation()
-                self.solvedResult.append((self.selectedProblemIndex, bool))
-                
-                self.endOperation()
-                
+            DispatchQueue.global().async {
+                ProblemLoader.checkAnswer(didSubmitAnswer, id: id) { (bool) in
+                    guard let bool = bool else { return }
+                    problemView.displayResult(bool)
+                    self.nextPanelAnimation()
+                    self.solvedResult.append((self.selectedProblemIndex, bool))
+                    
+                    self.endOperation()
+                }
             }
+
         }
     }
 }

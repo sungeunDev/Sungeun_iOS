@@ -12,7 +12,7 @@ class SimServer {
     
     private static let bundle = Bundle(for: ProblemLoader.self)
     
-    private static let networkDelay = 0.3
+    private static let networkDelay = 1.0
     
     /**
      Get the problem with the given identifier.
