@@ -26,6 +26,7 @@
 		02A0661421FECD2A0013F282 /* NimbleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A0661321FECD2A0013F282 /* NimbleTests.swift */; };
 		02A0661D21FEF9ED0013F282 /* AsyncUnitTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A0661C21FEF9ED0013F282 /* AsyncUnitTestUITests.swift */; };
 		02A0662721FEFB260013F282 /* EarlGreyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A0662621FEFB260013F282 /* EarlGreyTest.swift */; };
+		02B22452220C297500B275A9 /* MonkeyTestsQuickVer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B22451220C297500B275A9 /* MonkeyTestsQuickVer.swift */; };
 		B767A5D720DE84E7DCA2DB38 /* Pods_AsyncUnitTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E972AC841395A4F9FB0141D2 /* Pods_AsyncUnitTest.framework */; };
 		C7180233B0E480F751C66018 /* Pods_AsyncUnitTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA37E316696B7E2C53960197 /* Pods_AsyncUnitTestTests.framework */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		02A0661C21FEF9ED0013F282 /* AsyncUnitTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncUnitTestUITests.swift; sourceTree = "<group>"; };
 		02A0661E21FEF9ED0013F282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02A0662621FEFB260013F282 /* EarlGreyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarlGreyTest.swift; sourceTree = "<group>"; };
+		02B22451220C297500B275A9 /* MonkeyTestsQuickVer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkeyTestsQuickVer.swift; sourceTree = "<group>"; };
 		12474B985A7FE87DF89CA376 /* Pods-AsyncUnitTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsyncUnitTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AsyncUnitTestTests/Pods-AsyncUnitTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		CF6A1744999AFCF9E7001D96 /* Pods-AsyncUnitTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AsyncUnitTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-AsyncUnitTest/Pods-AsyncUnitTest.release.xcconfig"; sourceTree = "<group>"; };
 		E972AC841395A4F9FB0141D2 /* Pods_AsyncUnitTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AsyncUnitTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				02A0660F21FEC93D0013F282 /* MonkeyTests.swift */,
+				02B22451220C297500B275A9 /* MonkeyTestsQuickVer.swift */,
 			);
 			path = MonkeyTests;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				02A0660221FEC3080013F282 /* GorillaDBTests.swift in Sources */,
 				02A0661421FECD2A0013F282 /* NimbleTests.swift in Sources */,
 				02A0661021FEC93D0013F282 /* MonkeyTests.swift in Sources */,
+				02B22452220C297500B275A9 /* MonkeyTestsQuickVer.swift in Sources */,
 				02A0662721FEFB260013F282 /* EarlGreyTest.swift in Sources */,
 				02A065F721FEC0270013F282 /* BananaTests.swift in Sources */,
 				02A065DA21F9740E0013F282 /* FooServiceUnitTest.swift in Sources */,
