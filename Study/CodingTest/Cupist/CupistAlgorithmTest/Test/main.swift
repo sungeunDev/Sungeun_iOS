@@ -14,7 +14,7 @@ import Foundation
 let input = readLine()!.components(separatedBy: " ")
 let row = Int(input[0])!
 let column = Int(input[1])!
-
+print("test")
 print(printPretty(of: cleanerVisitCount(row: row, column: column)))
 
 //var probs: [String] = []

@@ -1,0 +1,60 @@
+PODS:
+  - Alamofire (4.8.2)
+  - Kingfisher (5.7.0)
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
+  - R.swift (5.0.3):
+    - R.swift.Library (~> 5.0.0)
+  - R.swift.Library (5.0.1)
+  - Realm (3.17.1):
+    - Realm/Headers (= 3.17.1)
+  - Realm/Headers (3.17.1)
+  - RealmSwift (3.17.1):
+    - Realm (= 3.17.1)
+  - SnapKit (5.0.0)
+  - SwiftyJSON (5.0.0)
+  - Then (2.5.0)
+  - Toaster (2.2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher (~> 5.0)
+  - NVActivityIndicatorView
+  - R.swift
+  - RealmSwift
+  - SnapKit (~> 5.0.0)
+  - SwiftyJSON (~> 5.0.0)
+  - Then
+  - Toaster (~> 2.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Kingfisher
+    - NVActivityIndicatorView
+    - R.swift
+    - R.swift.Library
+    - Realm
+    - RealmSwift
+    - SnapKit
+    - SwiftyJSON
+    - Then
+    - Toaster
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
+  R.swift: f5a87643b91ea569d23d6afb3eee9c743edde239
+  R.swift.Library: cfe85d569d9bae6cb262922db130e7c3a7a5fad1
+  Realm: c204f1a890f07dea43b14132a6aad118c054b8f2
+  RealmSwift: 4d3c9233544b9cd08a8913e0872b9038eb99b054
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Then: 0157115e883545c77967b452fe74a1d25fb796e1
+  Toaster: c1a81b376edcc2470157b4d1ee1e9341d3b96455
+
+PODFILE CHECKSUM: 8ecf71900b95d953dd67a52a3d54d53b4fbe248e
+
+COCOAPODS: 1.7.0.beta.3
